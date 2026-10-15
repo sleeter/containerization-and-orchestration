@@ -1,0 +1,3 @@
+image: api:0.1
+replicas: 2
+otlpEndpoint: http://jaeger.monitoring.svc:4318
