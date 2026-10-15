@@ -1,0 +1,48 @@
+prometheus:
+  prometheusSpec:
+    # по умолчанию Prometheus берёт только ServiceMonitor с лейблом своего релиза;
+    # false = брать любые, из любых namespace (нужно для чартов из лаб 3-6)
+    serviceMonitorSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+    retention: 24h
+
+alertmanager:
+  config:
+    route:
+      receiver: "null"
+      group_by: [alertname]
+      group_wait: 10s
+      group_interval: 30s
+      repeat_interval: 1h
+      routes:
+        # наши алерты api уходят в webhook, остальной фон кластера — в никуда
+        - receiver: webhook
+          matchers:
+            - app="api"
+    receivers:
+      - name: "null"
+      - name: webhook
+        webhook_configs:
+          - url: http://webhook-logger.monitoring.svc:8080/
+            send_resolved: true
+
+grafana:
+  adminPassword: admin
+  additionalDataSources:
+    - name: Loki
+      uid: loki
+      type: loki
+      access: proxy
+      url: http://loki.monitoring.svc:3100
+      jsonData:
+        derivedFields:
+          # trace_id из JSON-лога превращается в ссылку на трейс в Jaeger
+          - name: trace_id
+            matcherRegex: '"trace_id":"(\w+)"'
+            url: '$${__value.raw}'
+            datasourceUid: jaeger
+    - name: Jaeger
+      uid: jaeger
+      type: jaeger
+      access: proxy
+      url: http://jaeger.monitoring.svc:16686
