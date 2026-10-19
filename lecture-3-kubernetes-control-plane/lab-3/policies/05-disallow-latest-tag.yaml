@@ -1,0 +1,35 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: disallow-latest-tag
+  annotations:
+    policies.kyverno.io/title: Disallow latest or missing image tag
+    policies.kyverno.io/description: >-
+      Тег latest (или его отсутствие) делает деплой невоспроизводимым и ломает откат.
+spec:
+  background: true
+  rules:
+    - name: check-tag
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - kube-system
+                - kube-public
+                - kube-node-lease
+                - kyverno
+                - monitoring
+                - demo
+                - cnpg-system
+      validate:
+        failureAction: Enforce
+        message: "Образ должен иметь явный тег, отличный от latest."
+        pattern:
+          spec:
+            containers:
+              - image: "*:* & !*:latest"

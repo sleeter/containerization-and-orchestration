@@ -1,0 +1,13 @@
+# Service нужен только для скрейпа метрик: Prometheus находит поды через Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: worker
+  labels:
+    app: worker
+    team: {{ .Values.team }}
+spec:
+  selector:
+    app: worker
+  ports:
+    - {name: http, port: 8080, targetPort: http}

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bad-registry
+  namespace: shop
+  labels:
+    app: demo
+    team: shop
+spec:
+  containers:
+    - name: app
+      image: nginx:1.27
+      resources:
+        requests: {cpu: 50m, memory: 32Mi}
+        limits: {cpu: 100m, memory: 64Mi}
