@@ -1,0 +1,11 @@
+5m20s       Warning   FailedScheduling    pod/batch-7566488d6b-g58fb            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+4m33s       Warning   FailedScheduling    pod/batch-7566488d6b-g58fb            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+53s         Warning   FailedScheduling    pod/api-6848954486-lxnss              0/2 nodes are available: 2 Insufficient cpu.
+52s         Normal    Preempted           pod/batch-7566488d6b-xv4xq            Preempted by pod 7086c43d-6d5f-41f4-a80c-8295199944a4 on node lab4-worker
+52s         Warning   FailedScheduling    pod/batch-7566488d6b-zbs4z            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+19s         Warning   FailedScheduling    pod/batch-7566488d6b-zbs4z            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+15s         Normal    Preempted           pod/batch-7566488d6b-jhbnj            Preempted by pod fccd5888-d45d-4824-9b32-8b683b0b6c53 on node lab4-control-plane
+15s         Warning   FailedScheduling    pod/api-6848954486-n7b7f              0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match pod topology spread constraints.
+15s         Warning   FailedScheduling    pod/batch-7566488d6b-4v8fs            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+10s         Warning   FailedScheduling    pod/batch-7566488d6b-4v8fs            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+10s         Warning   FailedScheduling    pod/api-6848954486-n7b7f              0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match pod topology spread constraints. no new claims to deallocate, preemption: not eligible due to a terminating pod on the nominated node.

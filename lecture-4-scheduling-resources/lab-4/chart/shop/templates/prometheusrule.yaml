@@ -1,0 +1,35 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: shop
+  labels:
+    team: {{ .Values.team }}
+spec:
+  groups:
+    - name: shop.rules
+      rules:
+        # 1. Пользователи получают 5xx: доля ошибок api > 5% дольше 2 минут (и трафик не нулевой)
+        - alert: ShopApiHighErrorRate
+          expr: |
+            sum(rate(http_requests_total{namespace="{{ .Release.Namespace }}", job="api", status=~"5.."}[2m]))
+              / sum(rate(http_requests_total{namespace="{{ .Release.Namespace }}", job="api"}[2m])) > 0.05
+            and sum(rate(http_requests_total{namespace="{{ .Release.Namespace }}", job="api"}[2m])) > 0.05
+          for: 2m
+          labels: {severity: critical, team: {{ .Values.team }}}
+          annotations:
+            summary: "shop api: доля 5xx выше 5% больше 2 минут"
+        # 2. Нет ни одного готового пода Postgres: /order и /orders не работают, а /health зелёный
+        - alert: ShopDatabaseNotReady
+          expr: |
+            (sum(kube_pod_status_ready{namespace="{{ .Release.Namespace }}", condition="true", pod=~"{{ .Values.db.name }}-[0-9]+"}) or vector(0)) < 1
+          for: 1m
+          labels: {severity: critical, team: {{ .Values.team }}}
+          annotations:
+            summary: "shop: нет ни одного готового пода postgres"
+        # 3. Воркер не работает: заказы принимаются, но не обрабатываются
+        - alert: ShopWorkerDown
+          expr: absent(up{namespace="{{ .Release.Namespace }}", job="worker"} == 1)
+          for: 1m
+          labels: {severity: critical, team: {{ .Values.team }}}
+          annotations:
+            summary: "shop: нет ни одного живого пода worker, заказы не обрабатываются"

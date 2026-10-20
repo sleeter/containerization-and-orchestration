@@ -1,0 +1,75 @@
+Name:             api-669ff97c44-k9q66
+Namespace:        shop
+Priority:         0
+Service Account:  default
+Node:             lab4-worker/172.18.0.2
+Start Time:       Tue, 20 Oct 2026 16:30:51 +0300
+Labels:           app=api
+                  pod-template-hash=669ff97c44
+                  team=shop
+Annotations:      <none>
+Status:           Running
+IP:               10.244.1.18
+IPs:
+  IP:           10.244.1.18
+Controlled By:  ReplicaSet/api-669ff97c44
+Containers:
+  api:
+    Container ID:   containerd://02328d1fa109ca783ea2973cc1ae3fbda7ba109d270ae3e447362db3f1def18d
+    Image:          shop/api:0.2
+    Image ID:       sha256:a3cf1e3376509796d2d26b89c744dc46b3d6c509dd80faab9f4699f2a52ad8f1
+    Port:           8080/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Tue, 20 Oct 2026 16:38:50 +0300
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 20 Oct 2026 16:30:59 +0300
+      Finished:     Tue, 20 Oct 2026 16:38:36 +0300
+    Ready:          True
+    Restart Count:  2
+    Limits:
+      cpu:     21m
+      memory:  100Mi
+    Requests:
+      cpu:      21m
+      memory:   100Mi
+    Liveness:   http-get http://:http/health delay=5s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/health delay=0s timeout=1s period=3s #success=1 #failure=2
+    Environment:
+      DATABASE_URL:  <set to the key 'uri' in secret 'shop-db-app'>  Optional: false
+      HEALTH_FAIL:   false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-4l744 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-4l744:
+    Type:                     Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:   3607
+    ConfigMapName:            kube-root-ca.crt
+    Optional:                 false
+    DownwardAPI:              true
+QoS Class:                    Guaranteed
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Topology Spread Constraints:  kubernetes.io/hostname:DoNotSchedule when max skew 1 is exceeded for selector app=api
+Events:
+  Type     Reason     Age                    From               Message
+  ----     ------     ----                   ----               -------
+  Normal   Scheduled  9m26s                  default-scheduler  Successfully assigned shop/api-669ff97c44-k9q66 to lab4-worker
+  Warning  Failed     9m21s                  kubelet            Error: failed to create containerd task: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error setting cgroup config for procHooks process: unable to freeze
+  Warning  Unhealthy  2m5s (x5 over 3m15s)   kubelet            Liveness probe failed: Get "http://10.244.1.18:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  Normal   Killing    2m5s                   kubelet            Container api failed liveness probe, will be restarted
+  Warning  Unhealthy  2m1s (x16 over 3m58s)  kubelet            Readiness probe failed: Get "http://10.244.1.18:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  Warning  Unhealthy  110s (x4 over 9m18s)   kubelet            Readiness probe failed: Get "http://10.244.1.18:8080/health": dial tcp 10.244.1.18:8080: connect: connection refused
+  Normal   Pulled     101s (x3 over 9m24s)   kubelet            Container image "shop/api:0.2" already present on machine
+  Normal   Created    101s (x3 over 9m23s)   kubelet            Created container: api
+  Normal   Started    87s (x2 over 9m18s)    kubelet            Started container api

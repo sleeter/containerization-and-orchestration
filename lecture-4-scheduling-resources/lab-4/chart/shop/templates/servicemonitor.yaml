@@ -1,0 +1,25 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: api
+  labels:
+    team: {{ .Values.team }}
+spec:
+  selector:
+    matchLabels: {app: api}
+  endpoints:
+    - port: http
+      interval: 15s
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: worker
+  labels:
+    team: {{ .Values.team }}
+spec:
+  selector:
+    matchLabels: {app: worker}
+  endpoints:
+    - port: http
+      interval: 15s

@@ -1,0 +1,64 @@
+
+ _____       _               _          _  _______  _____
+|  __ \     | |             | |        | |/ /  __ \|  __ \
+| |__) |___ | |__  _   _ ___| |_ __ _  | ' /| |__) | |__) |
+|  _  // _ \| '_ \| | | / __| __/ _` | |  < |  _  /|  _  /
+| | \ \ (_) | |_) | |_| \__ \ || (_| | | . \| | \ \| | \ \
+|_|  \_\___/|_.__/ \__,_|___/\__\__,_| |_|\_\_|  \_\_|  \_\
+
+
+Thanks for using Robusta KRR. If you have any questions or feedback, please feel free to reach out to us at
+https://github.com/robusta-dev/krr/issues
+
+Watch our latest video to optimize your workloads and save costs: https://www.youtube.com/watch?v=TYRA2QcDIuI
+
+
+
+Running Robusta's KRR (Kubernetes Resource Recommender) 1.8.2-dev
+Using strategy: Simple
+Using formatter: table
+
+[13:26:33] INFO     Using clusters: ['kind-lab4']                                                                                                                                                              runner.py:270
+           INFO     Prometheus URL is specified, will not auto-detect a metrics service                                                                                                                         loader.py:55
+           INFO     Trying to connect to Prometheus for kind-lab4 cluster                                                                                                                   prometheus_metrics_service.py:66
+           INFO     Using Prometheus at http://10.244.0.5:9090 for cluster kind-lab4                                                                                                        prometheus_metrics_service.py:93
+           INFO     Prometheus found                                                                                                                                                                            loader.py:74
+           INFO     Prometheus connected successfully for kind-lab4 cluster                                                                                                                                     loader.py:47
+[13:26:34] WARNING  Not enough history available for cluster kind-lab4.                                                                                                                                        runner.py:225
+           WARNING  If the cluster is freshly installed, it might take some time for the enough data to be available.                                                                                          runner.py:228
+           WARNING  Enough data is estimated to be available after 2026-10-20 13:26:34, but will try to calculate recommendations anyway.                                                                      runner.py:231
+           INFO     Listing scannable objects in kind-lab4                                                                                                                                                    __init__.py:58
+           WARNING  Was not able to load any pods for Cluster shop/shop-db-1/postgres from Prometheus. Loaded pods from Kubernetes API instead.                                                                runner.py:183
+           INFO     Calculated recommendations for Deployment shop/batch/batch (using 4 metrics)                                                                                                               runner.py:200
+           INFO     Calculated recommendations for Deployment shop/api/api (using 4 metrics)                                                                                                                   runner.py:200
+           INFO     Calculated recommendations for Cluster shop/shop-db-1/postgres (using 4 metrics)                                                                                                           runner.py:200
+           INFO     Calculated recommendations for Deployment shop/worker/worker (using 4 metrics)                                                                                                             runner.py:200
+           INFO     Result collected, displaying...                                                                                                                                                            runner.py:326
+                                                                                                                                                                                      
+Simple Strategy                                                                                                                                                                       
+                                                                                                                                                                                      
+CPU request: 99.0% percentile, limit: unset                                                                                                                                           
+Memory request: max + 15.0%, limit: max + 15.0%                                                                                                                                       
+History: 1.0 hours                                                                                                                                                                    
+Step: 0.5 minutes                                                                                                                                                                     
+                                                                                                                                                                                      
+All parameters can be customized. For example: `krr simple --cpu_percentile=90 --memory_buffer_percentage=15 --history_duration=24 --timeframe_duration=0.5`                          
+                                                                                                                                                                                      
+This strategy does not work with objects with HPA defined (Horizontal Pod Autoscaler).                                                                                                
+If HPA is defined for CPU or Memory, the strategy will return "?" for that resource.                                                                                                  
+You can override this behaviour by passing the --allow-hpa flag                                                                                                                       
+                                                                                                                                                                                      
+Learn more: https://github.com/robusta-dev/krr#algorithm                                                                                                                              
+                                                                                                                                                                                      
+┏━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ Number ┃ Namespace ┃ Name      ┃ Pods ┃ Old Pods ┃ Type       ┃ Container ┃ CPU Diff ┃ CPU Requests        ┃ CPU Limits    ┃ Memory Diff ┃ Memory Requests        ┃ Memory Limits  ┃
+┡━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│     1. │ shop      │ api       │ 3    │ 3        │ Deployment │ api       │ -87m     │ (-29m) 50m -> 21m   │ 200m -> unset │ +204Mi      │ (+68Mi) 32Mi -> 100Mi  │ 64Mi -> 100Mi  │
+├────────┼───────────┼───────────┼──────┼──────────┼────────────┼───────────┼──────────┼─────────────────────┼───────────────┼─────────────┼────────────────────────┼────────────────┤
+│     2. │ shop      │ batch     │ 1    │ 0        │ Deployment │ batch     │ +21m     │ (+21m) 50m -> 72m   │ 300m -> unset │ +52Mi       │ (+52Mi) 48Mi -> 100Mi  │ 128Mi -> 100Mi │
+├────────┼───────────┼───────────┼──────┼──────────┼────────────┼───────────┼──────────┼─────────────────────┼───────────────┼─────────────┼────────────────────────┼────────────────┤
+│     3. │ shop      │ worker    │ 2    │ 0        │ Deployment │ worker    │ -64m     │ (-32m) 50m -> 18m   │ 200m -> unset │ +136Mi      │ (+68Mi) 32Mi -> 100Mi  │ 64Mi -> 100Mi  │
+├────────┼───────────┼───────────┼──────┼──────────┼────────────┼───────────┼──────────┼─────────────────────┼───────────────┼─────────────┼────────────────────────┼────────────────┤
+│     4. │ shop      │ shop-db-1 │ 1    │ 0        │ Cluster    │ postgres  │ +19m     │ (+19m) 100m -> 120m │ 500m -> unset │ -11Mi       │ (-11Mi) 128Mi -> 117Mi │ 256Mi -> 117Mi │
+└────────┴───────────┴───────────┴──────┴──────────┴────────────┴───────────┴──────────┴─────────────────────┴───────────────┴─────────────┴────────────────────────┴────────────────┘
+                                                                                    30 points - D                                                                                     

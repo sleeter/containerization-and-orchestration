@@ -1,0 +1,142 @@
+                                                                                
+ Usage: krr.py simple [OPTIONS]                                                 
+                                                                                
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --help          Show this message and exit.                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Kubernetes Settings ────────────────────────────────────────────────────────╮
+│ --kubeconfig         -k      TEXT  Path to kubeconfig file. If not provided, │
+│                                    will attempt to find it.                  │
+│                                    [default: None]                           │
+│ --as                         TEXT  Impersonate a user, just like `kubectl    │
+│                                    --as`. For example,                       │
+│                                    system:serviceaccount:default:krr-accoun… │
+│                                    [default: None]                           │
+│ --as-group                   TEXT  Impersonate a user inside of a group,     │
+│                                    just like `kubectl --as-group`. For       │
+│                                    example, system:authenticated.            │
+│                                    [default: None]                           │
+│ --context,--cluster  -c      TEXT  List of clusters to run on. By default,   │
+│                                    will run on the current cluster. Use      │
+│                                    --all-clusters to run on all clusters.    │
+│                                    [default: None]                           │
+│ --all-clusters                     Run on all clusters. Overrides --context. │
+│ --namespace          -n      TEXT  List of namespaces to run on. By default, │
+│                                    will run on all namespaces except         │
+│                                    'kube-system'.                            │
+│                                    [default: None]                           │
+│ --resource           -r      TEXT  List of resources to run on (Deployment,  │
+│                                    StatefulSet, DaemonSet, Job, Rollout). By │
+│                                    default, will run on all resources. Case  │
+│                                    insensitive.                              │
+│                                    [default: None]                           │
+│ --selector           -s      TEXT  Selector (label query) to filter on,      │
+│                                    supports '=', '==', and '!='.(e.g. -s     │
+│                                    key1=value1,key2=value2). Matching        │
+│                                    objects must satisfy all of the specified │
+│                                    label constraints.                        │
+│                                    [default: None]                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Prometheus Settings ────────────────────────────────────────────────────────╮
+│ --prometheus-url            -p      TEXT  Prometheus URL. If not provided,   │
+│                                           will attempt to find it in         │
+│                                           kubernetes cluster                 │
+│                                           [default: None]                    │
+│ --prometheus-auth-header            TEXT  Prometheus authentication header.  │
+│                                           [default: None]                    │
+│ --prometheus-headers        -H      TEXT  Additional headers to add to       │
+│                                           Prometheus requests. Format as     │
+│                                           'key: value', for example          │
+│                                           'X-MyHeader: 123'. Trailing        │
+│                                           whitespaces will be stripped.      │
+│                                           [default: None]                    │
+│ --prometheus-ssl-enabled                  Enable SSL for Prometheus          │
+│                                           requests.                          │
+│ --prometheus-cluster-label  -l      TEXT  The label in prometheus for your   │
+│                                           cluster.(Only relevant for         │
+│                                           centralized prometheus)            │
+│                                           [default: None]                    │
+│ --prometheus-label                  TEXT  The label in prometheus used to    │
+│                                           differentiate clusters. (Only      │
+│                                           relevant for centralized           │
+│                                           prometheus)                        │
+│                                           [default: None]                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Prometheus EKS Settings ────────────────────────────────────────────────────╮
+│ --eks-managed-prom                     Adds additional signitures for eks    │
+│                                        prometheus connection.                │
+│ --eks-profile-name               TEXT  Sets the profile name for eks         │
+│                                        prometheus connection.                │
+│                                        [default: None]                       │
+│ --eks-access-key                 TEXT  Sets the access key for eks           │
+│                                        prometheus connection.                │
+│                                        [default: None]                       │
+│ --eks-secret-key                 TEXT  Sets the secret key for eks           │
+│                                        prometheus connection.                │
+│                                        [default: None]                       │
+│ --eks-service-name               TEXT  Sets the service name for eks         │
+│                                        prometheus connection.                │
+│                                        [default: aps]                        │
+│ --eks-managed-prom-region        TEXT  Sets the region for eks prometheus    │
+│                                        connection.                           │
+│                                        [default: None]                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Prometheus Coralogix Settings ──────────────────────────────────────────────╮
+│ --coralogix-token        TEXT  Adds the token needed to query Coralogix      │
+│                                managed prometheus.                           │
+│                                [default: None]                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Recommendation Settings ────────────────────────────────────────────────────╮
+│ --cpu-min        INTEGER  Sets the minimum recommended cpu value in          │
+│                           millicores.                                        │
+│                           [default: 10]                                      │
+│ --mem-min        INTEGER  Sets the minimum recommended memory value in MB.   │
+│                           [default: 100]                                     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Threading Settings ─────────────────────────────────────────────────────────╮
+│ --max-workers  -w      INTEGER  Max workers to use for async requests.       │
+│                                 [default: 10]                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Logging Settings ───────────────────────────────────────────────────────────╮
+│ --formatter    -f      TEXT     Output formatter (json, pprint, table, yaml, │
+│                                 csv_export)                                  │
+│                                 [default: table]                             │
+│ --verbose      -v               Enable verbose mode                          │
+│ --quiet        -q               Enable quiet mode                            │
+│ --logtostderr                   Pass logs to stderr                          │
+│ --width                INTEGER  Width of the output. Will use console width  │
+│                                 by default.                                  │
+│                                 [default: None]                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Output Settings ────────────────────────────────────────────────────────────╮
+│ --show-cluster-name              In table output, always show the cluster    │
+│                                  name even for a single cluster              │
+│ --fileoutput               TEXT  Print the output to a file [default: None]  │
+│ --slackoutput              TEXT  Send to output to a slack channel, must     │
+│                                  have SLACK_BOT_TOKEN                        │
+│                                  [default: None]                             │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Strategy Settings ──────────────────────────────────────────────────────────╮
+│ --history_duration,--history-d…        TEXT  The duration of the history     │
+│                                              data to use (in hours).         │
+│                                              [default: 336]                  │
+│ --timeframe-duration,--timefra…        TEXT  The step for the history data   │
+│                                              (in minutes).                   │
+│                                              [default: 1.25]                 │
+│ --cpu_percentile,--cpu-percent…        TEXT  The percentile to use for the   │
+│                                              CPU recommendation.             │
+│                                              [default: 99]                   │
+│ --memory_buffer_percentage,--m…        TEXT  The percentage of added buffer  │
+│                                              to the peak memory usage for    │
+│                                              memory recommendation.          │
+│                                              [default: 15]                   │
+│ --points-required,--points_req…        TEXT  The number of data points       │
+│                                              required to make a              │
+│                                              recommendation for a resource.  │
+│                                              [default: 100]                  │
+│ --allow_hpa,--allow-hpa                      Whether to calculate            │
+│                                              recommendations even when there │
+│                                              is an HPA scaler defined on     │
+│                                              that resource.                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+

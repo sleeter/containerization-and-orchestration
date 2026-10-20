@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: batch-no-resources
+  namespace: shop
+  labels:
+    app: batch
+    team: shop
+spec:
+  containers:
+    - name: batch
+      image: shop/batch:0.1

@@ -1,0 +1,266 @@
+
+ _____       _               _          _  _______  _____
+|  __ \     | |             | |        | |/ /  __ \|  __ \
+| |__) |___ | |__  _   _ ___| |_ __ _  | ' /| |__) | |__) |
+|  _  // _ \| '_ \| | | / __| __/ _` | |  < |  _  /|  _  /
+| | \ \ (_) | |_) | |_| \__ \ || (_| | | . \| | \ \| | \ \
+|_|  \_\___/|_.__/ \__,_|___/\__\__,_| |_|\_\_|  \_\_|  \_\
+
+
+Thanks for using Robusta KRR. If you have any questions or feedback, please feel
+free to reach out to us at
+https://github.com/robusta-dev/krr/issues
+
+Watch our latest video to optimize your workloads and save costs: 
+https://www.youtube.com/watch?v=TYRA2QcDIuI
+
+
+
+Running Robusta's KRR (Kubernetes Resource Recommender) 1.8.2-dev
+Using strategy: Simple
+Using formatter: json
+
+[13:15:49] INFO     Using clusters: ['kind-lab4']                  runner.py:270
+           INFO     Prometheus URL is specified, will not           loader.py:55
+                    auto-detect a metrics service                               
+           INFO     Trying to connect to        prometheus_metrics_service.py:66
+                    Prometheus for kind-lab4                                    
+                    cluster                                                     
+           INFO     Using Prometheus at         prometheus_metrics_service.py:93
+                    http://10.244.0.5:9090 for                                  
+                    cluster kind-lab4                                           
+           INFO     Prometheus found                                loader.py:74
+           INFO     Prometheus connected successfully for kind-lab4 loader.py:47
+                    cluster                                                     
+           WARNING  Not enough history available for cluster       runner.py:225
+                    kind-lab4.                                                  
+           WARNING  If the cluster is freshly installed, it might  runner.py:228
+                    take some time for the enough data to be                    
+                    available.                                                  
+           WARNING  Enough data is estimated to be available after runner.py:231
+                    2026-10-20 13:15:50, but will try to calculate              
+                    recommendations anyway.                                     
+           INFO     Listing scannable objects in kind-lab4        __init__.py:58
+[13:15:50] INFO     Calculated recommendations for Deployment      runner.py:200
+                    shop/api/api (using 4 metrics)                              
+[13:15:51] INFO     Calculated recommendations for Deployment      runner.py:200
+                    shop/worker/worker (using 4 metrics)                        
+           INFO     Calculated recommendations for Deployment      runner.py:200
+                    shop/batch/batch (using 4 metrics)                          
+           INFO     Result collected, displaying...                runner.py:326
+{
+  "scans": [
+    {
+      "object": {
+        "cluster": "kind-lab4",
+        "name": "api",
+        "container": "api",
+        "pods": [
+          {
+            "name": "api-57884d6949-d9r5v",
+            "deleted": true
+          },
+          {
+            "name": "api-57884d6949-ntthl",
+            "deleted": true
+          },
+          {
+            "name": "api-58444998f5-jb8fg",
+            "deleted": false
+          },
+          {
+            "name": "api-58444998f5-q5l6h",
+            "deleted": false
+          },
+          {
+            "name": "api-58444998f5-hght9",
+            "deleted": false
+          },
+          {
+            "name": "api-57884d6949-4xbzx",
+            "deleted": true
+          }
+        ],
+        "hpa": null,
+        "namespace": "shop",
+        "kind": "Deployment",
+        "allocations": {
+          "requests": {
+            "cpu": 0.05,
+            "memory": 33554432.0
+          },
+          "limits": {
+            "cpu": 0.2,
+            "memory": 67108864.0
+          },
+          "info": {}
+        },
+        "warnings": []
+      },
+      "recommended": {
+        "requests": {
+          "cpu": {
+            "value": 0.022,
+            "severity": "GOOD"
+          },
+          "memory": {
+            "value": 104857600.0,
+            "severity": "GOOD"
+          }
+        },
+        "limits": {
+          "cpu": {
+            "value": null,
+            "severity": "WARNING"
+          },
+          "memory": {
+            "value": 104857600.0,
+            "severity": "GOOD"
+          }
+        },
+        "info": {
+          "cpu": null,
+          "memory": null
+        }
+      },
+      "severity": "WARNING"
+    },
+    {
+      "object": {
+        "cluster": "kind-lab4",
+        "name": "batch",
+        "container": "batch",
+        "pods": [
+          {
+            "name": "batch-58f88f5-9snrn",
+            "deleted": false
+          }
+        ],
+        "hpa": null,
+        "namespace": "shop",
+        "kind": "Deployment",
+        "allocations": {
+          "requests": {
+            "cpu": 0.05,
+            "memory": 50331648.0
+          },
+          "limits": {
+            "cpu": 0.3,
+            "memory": 134217728.0
+          },
+          "info": {}
+        },
+        "warnings": []
+      },
+      "recommended": {
+        "requests": {
+          "cpu": {
+            "value": 0.072,
+            "severity": "GOOD"
+          },
+          "memory": {
+            "value": 104857600.0,
+            "severity": "GOOD"
+          }
+        },
+        "limits": {
+          "cpu": {
+            "value": null,
+            "severity": "WARNING"
+          },
+          "memory": {
+            "value": 104857600.0,
+            "severity": "GOOD"
+          }
+        },
+        "info": {
+          "cpu": null,
+          "memory": null
+        }
+      },
+      "severity": "WARNING"
+    },
+    {
+      "object": {
+        "cluster": "kind-lab4",
+        "name": "worker",
+        "container": "worker",
+        "pods": [
+          {
+            "name": "worker-774fb5f4db-wpdh5",
+            "deleted": false
+          },
+          {
+            "name": "worker-774fb5f4db-rptl6",
+            "deleted": false
+          }
+        ],
+        "hpa": null,
+        "namespace": "shop",
+        "kind": "Deployment",
+        "allocations": {
+          "requests": {
+            "cpu": 0.05,
+            "memory": 33554432.0
+          },
+          "limits": {
+            "cpu": 0.2,
+            "memory": 67108864.0
+          },
+          "info": {}
+        },
+        "warnings": []
+      },
+      "recommended": {
+        "requests": {
+          "cpu": {
+            "value": 0.018,
+            "severity": "GOOD"
+          },
+          "memory": {
+            "value": 104857600.0,
+            "severity": "GOOD"
+          }
+        },
+        "limits": {
+          "cpu": {
+            "value": null,
+            "severity": "WARNING"
+          },
+          "memory": {
+            "value": 104857600.0,
+            "severity": "GOOD"
+          }
+        },
+        "info": {
+          "cpu": null,
+          "memory": null
+        }
+      },
+      "severity": "WARNING"
+    }
+  ],
+  "score": 30,
+  "resources": [
+    "cpu",
+    "memory"
+  ],
+  "description": "[b]Simple Strategy[/b]\n\nCPU request: 99.0% percentile, limit: unset\nMemory request: max + 15.0%, limit: max + 15.0%\nHistory: 1.0 hours\nStep: 0.5 minutes\n\nAll parameters can be customized. For example: `krr simple --cpu_percentile=90 --memory_buffer_percentage=15 --history_duration=24 --timeframe_duration=0.5`\n\nThis strategy does not work with objects with HPA defined (Horizontal Pod Autoscaler).\nIf HPA is defined for CPU or Memory, the strategy will return \"?\" for that resource.\nYou can override this behaviour by passing the --allow-hpa flag\n\nLearn more: [underline]https://github.com/robusta-dev/krr#algorithm[/underline]",
+  "strategy": {
+    "name": "simple",
+    "settings": {
+      "history_duration": 1.0,
+      "timeframe_duration": 0.5,
+      "cpu_percentile": 99.0,
+      "memory_buffer_percentage": 15.0,
+      "points_required": 10,
+      "allow_hpa": false
+    }
+  },
+  "errors": [
+    {
+      "name": "NotEnoughHistoryAvailable",
+      "retry_after": "2026-10-20T13:15:50"
+    }
+  ]
+}

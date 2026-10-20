@@ -1,0 +1,52 @@
+team: shop
+
+db:
+  name: shop-db
+  instances: 1
+  storage: 1Gi
+  resources:
+    requests: {cpu: 500m, memory: 117Mi}
+    limits: {cpu: 500m, memory: 117Mi}
+
+api:
+  image: shop/api:0.2
+  replicas: 3
+  healthFail: false
+  resources:
+    requests: {cpu: 200m, memory: 100Mi}
+    limits: {cpu: 200m, memory: 100Mi}
+
+worker:
+  image: shop/worker:0.1
+  replicas: 2
+  resources:
+    requests: {cpu: 18m, memory: 100Mi}
+    limits: {cpu: 200m, memory: 100Mi}
+
+batch:
+  image: shop/batch:0.1
+  replicas: 5
+  memoryMiB: 16
+  cpuPercent: 1
+  resources:
+    requests:
+      cpu: "3"
+      memory: 32Mi
+    limits:
+      cpu: "4"
+      memory: 64Mi
+
+scheduling:
+  mode: topologySpreadConstraints
+
+priority:
+  critical:
+    name: shop-critical
+    value: 100000
+  batch:
+    name: shop-batch
+    value: 1000
+
+pdb:
+  api:
+    minAvailable: 2

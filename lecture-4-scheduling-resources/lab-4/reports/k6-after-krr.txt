@@ -1,0 +1,53 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: -
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 20 max VUs, 15m30s max duration (incl. graceful stop):
+              * orders: 10.00 iterations/s for 15m0s (maxVUs: 5-20, gracefulStop: 30s)
+
+
+running (00m00.9s), 04/05 VUs, 5 complete and 0 interrupted iterations
+orders   [   0% ] 04/05 VUs  00m00.9s/15m0s  10.00 iters/s
+
+running (00m01.9s), 03/05 VUs, 16 complete and 0 interrupted iterations
+orders   [   0% ] 03/05 VUs  00m01.9s/15m0s  10.00 iters/s
+
+running (00m02.9s), 05/06 VUs, 23 complete and 0 interrupted iterations
+orders   [   0% ] 05/06 VUs  00m02.9s/15m0s  10.00 iters/s
+
+running (00m03.9s), 05/07 VUs, 32 complete and 0 interrupted iterations
+orders   [   0% ] 05/07 VUs  00m03.9s/15m0s  10.00 iters/s
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+
+running (00m04.9s), 03/08 VUs, 43 complete and 0 interrupted iterations
+orders   [   1% ] 03/08 VUs  00m04.9s/15m0s  10.00 iters/s
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": request timeout"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:47Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": EOF"
+time="2026-10-20T13:39:48Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": request timeout"
+time="2026-10-20T13:39:48Z" level=warning msg="Request Failed" error="Post \"http://host.docker.internal:8080/order\": request timeout"
+
+running (00m05.9s), 07/08 VUs, 49 complete and 0 interrupted iterations
+orders   [   1% ] 07/08 VUs  00m05.9s/15m0s  10.00 iters/s
+
+running (00m06.9s), 12/13 VUs, 49 complete and 0 interrupted iterations
+orders   [   1% ] 12/13 VUs  00m06.9s/15m0s  10.00 iters/s

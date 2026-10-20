@@ -1,0 +1,6 @@
+Error from server: error when creating "tests/bad-no-resources.yaml": admission webhook "validate.kyverno.svc-fail" denied the request: 
+
+resource Pod/shop/batch-no-resources was blocked due to the following policies 
+
+require-resource-limits:
+  check-resources: 'validation error: У каждого контейнера должны быть requests и limits по cpu и memory. rule check-resources failed at path /spec/containers/0/resources/limits/'

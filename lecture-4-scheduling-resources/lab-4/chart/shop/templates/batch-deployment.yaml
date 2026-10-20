@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: batch
+  labels:
+    app: batch
+    team: {{ .Values.team }}
+spec:
+  replicas: {{ .Values.batch.replicas }}
+  strategy:
+    type: Recreate
+    rollingUpdate: null
+  selector:
+    matchLabels:
+      app: batch
+  template:
+    metadata:
+      labels:
+        app: batch
+        team: {{ .Values.team }}
+    spec:
+      priorityClassName: {{ .Values.priority.batch.name }}
+      {{- with .Values.batch.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: batch
+          image: {{ .Values.batch.image }}
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MEMORY_MIB
+              value: {{ .Values.batch.memoryMiB | quote }}
+            - name: CPU_PERCENT
+              value: {{ .Values.batch.cpuPercent | quote }}
+          resources:
+            {{- toYaml .Values.batch.resources | nindent 12 }}
