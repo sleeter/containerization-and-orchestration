@@ -5,16 +5,16 @@ db:
   instances: 1
   storage: 1Gi
   resources:
-    requests: {cpu: 500m, memory: 117Mi}
-    limits: {cpu: 500m, memory: 117Mi}
+    requests: {cpu: "1", memory: 117Mi}
+    limits: {cpu: "1", memory: 117Mi}
 
 api:
   image: shop/api:0.2
   replicas: 3
   healthFail: false
   resources:
-    requests: {cpu: 200m, memory: 100Mi}
-    limits: {cpu: 200m, memory: 100Mi}
+    requests: {cpu: 500m, memory: 100Mi}
+    limits: {cpu: 500m, memory: 100Mi}
 
 worker:
   image: shop/worker:0.1
@@ -24,9 +24,9 @@ worker:
     limits: {cpu: 200m, memory: 100Mi}
 
 batch:
-  image: shop/batch:0.1
+  image: shop/batch:0.2
+  memoryMiB: 32
   replicas: 1
-  memoryMiB: 320
   cpuPercent: 1
   nodeSelector:
     kubernetes.io/hostname: lab4-worker
@@ -46,8 +46,8 @@ priority:
     name: shop-critical
     value: 100000
   batch:
-    name: shop-batch
-    value: 1000
+    name: shop-batch-low
+    value: -1000
 
 pdb:
   api:

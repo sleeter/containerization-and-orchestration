@@ -1,0 +1,156 @@
+Name:                 shop-db-1
+Namespace:            shop
+Priority:             100000
+Priority Class Name:  shop-critical
+Service Account:      shop-db
+Node:                 lab4-worker/172.18.0.2
+Start Time:           Wed, 21 Oct 2026 16:36:03 +0300
+Labels:               app=postgres
+                      app.kubernetes.io/component=database
+                      app.kubernetes.io/instance=shop-db
+                      app.kubernetes.io/managed-by=cloudnative-pg
+                      app.kubernetes.io/name=postgresql
+                      app.kubernetes.io/version=18
+                      cnpg.io/cluster=shop-db
+                      cnpg.io/instanceName=shop-db-1
+                      cnpg.io/instanceRole=primary
+                      cnpg.io/podRole=instance
+                      role=primary
+                      team=shop
+Annotations:          cnpg.io/nodeSerial: 1
+                      cnpg.io/operatorVersion: 1.30.1
+                      cnpg.io/podEnvHash: 6676c6d456
+                      cnpg.io/podSpec:
+                        {"volumes":[{"name":"pgdata","persistentVolumeClaim":{"claimName":"shop-db-1"}},{"name":"scratch-data","emptyDir":{}},{"name":"shm","empty...
+Status:               Running
+SeccompProfile:       RuntimeDefault
+IP:                   10.244.1.22
+IPs:
+  IP:           10.244.1.22
+Controlled By:  Cluster/shop-db
+Init Containers:
+  bootstrap-controller:
+    Container ID:    containerd://e2d8353a75fc950ab39576db8fdbe494b054b907bdc6b51afeef73543e90776a
+    Image:           ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1
+    Image ID:        ghcr.io/cloudnative-pg/cloudnative-pg@sha256:923c267ec29636db3bee20f993d0ec4973fa22998e1adad37da79e4d32b5bc07
+    Port:            <none>
+    Host Port:       <none>
+    SeccompProfile:  RuntimeDefault
+    Command:
+      /manager
+      bootstrap
+      /controller/manager
+      --log-level=info
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Wed, 21 Oct 2026 16:36:04 +0300
+      Finished:     Wed, 21 Oct 2026 16:36:05 +0300
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  117Mi
+    Requests:
+      cpu:        1
+      memory:     117Mi
+    Environment:  <none>
+    Mounts:
+      /controller from scratch-data (rw)
+      /dev/shm from shm (rw)
+      /run from scratch-data (rw)
+      /var/lib/postgresql/data from pgdata (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9cggl (ro)
+Containers:
+  postgres:
+    Container ID:    containerd://97281a0a77b9374658e317c7567b78f976959b11156d9d58eecd9250b4715bce
+    Image:           ghcr.io/cloudnative-pg/postgresql:18.6-system-trixie
+    Image ID:        ghcr.io/cloudnative-pg/postgresql@sha256:f7e00138159bb45d70b624ba25e446924cb3ed1bf366d13e936c3f81b914064e
+    Ports:           5432/TCP (postgresql), 9187/TCP (metrics), 8000/TCP (status)
+    Host Ports:      0/TCP (postgresql), 0/TCP (metrics), 0/TCP (status)
+    SeccompProfile:  RuntimeDefault
+    Command:
+      /controller/manager
+      instance
+      run
+      --status-port-tls
+      --log-level=info
+    State:          Running
+      Started:      Wed, 21 Oct 2026 18:44:04 +0300
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Wed, 21 Oct 2026 16:36:07 +0300
+      Finished:     Wed, 21 Oct 2026 18:43:59 +0300
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     1
+      memory:  117Mi
+    Requests:
+      cpu:      1
+      memory:   117Mi
+    Liveness:   http-get https://:8000/healthz delay=0s timeout=5s period=10s #success=1 #failure=3
+    Readiness:  http-get https://:8000/readyz delay=0s timeout=5s period=10s #success=1 #failure=3
+    Startup:    http-get https://:8000/startupz delay=0s timeout=5s period=10s #success=1 #failure=360
+    Environment:
+      PGDATA:        /var/lib/postgresql/data/pgdata
+      POD_NAME:      shop-db-1
+      NAMESPACE:     shop
+      CLUSTER_NAME:  shop-db
+      PSQL_HISTORY:  /controller/tmp/.psql_history
+      PGPORT:        5432
+      PGHOST:        /controller/run
+      TMPDIR:        /controller/tmp
+    Mounts:
+      /controller from scratch-data (rw)
+      /dev/shm from shm (rw)
+      /run from scratch-data (rw)
+      /var/lib/postgresql/data from pgdata (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9cggl (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  pgdata:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  shop-db-1
+    ReadOnly:   false
+  scratch-data:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  shm:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  kube-api-access-9cggl:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                  From     Message
+  ----     ------     ----                 ----     -------
+  Warning  Unhealthy  11m                  kubelet  Liveness probe failed: Get "https://10.244.1.22:8000/healthz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+  Normal   Killing    11m                  kubelet  Container postgres failed liveness probe, will be restarted
+  Warning  Unhealthy  11m (x2 over 11m)    kubelet  Liveness probe failed: Get "https://10.244.1.22:8000/healthz": context deadline exceeded
+  Warning  Unhealthy  10m (x7 over 11m)    kubelet  Readiness probe failed: Get "https://10.244.1.22:8000/readyz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+  Warning  Unhealthy  10m (x3 over 53m)    kubelet  Readiness probe failed: Get "https://10.244.1.22:8000/readyz": context deadline exceeded
+  Warning  Unhealthy  10m (x2 over 18m)    kubelet  Readiness probe failed: Get "https://10.244.1.22:8000/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  Normal   Pulled     9m56s                kubelet  Container image "ghcr.io/cloudnative-pg/postgresql:18.6-system-trixie" already present on machine
+  Normal   Created    9m55s                kubelet  Created container: postgres
+  Warning  Unhealthy  9m53s                kubelet  Readiness probe failed: Get "https://10.244.1.22:8000/readyz": dial tcp 10.244.1.22:8000: connect: connection refused
+  Normal   Started    9m52s                kubelet  Started container postgres
+  Warning  Unhealthy  9m48s                kubelet  Startup probe failed: Get "https://10.244.1.22:8000/startupz": dial tcp 10.244.1.22:8000: connect: connection refused
+  Warning  Unhealthy  9m37s                kubelet  Startup probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy  9m11s (x7 over 34m)  kubelet  Readiness probe failed: Get "https://10.244.1.22:8000/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)

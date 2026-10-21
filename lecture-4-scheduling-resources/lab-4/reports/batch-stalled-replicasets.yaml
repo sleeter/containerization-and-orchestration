@@ -1,0 +1,345 @@
+apiVersion: v1
+items:
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "1"
+      meta.helm.sh/release-name: shop
+      meta.helm.sh/release-namespace: shop
+    creationTimestamp: "2026-10-20T19:34:57Z"
+    generation: 2
+    labels:
+      app: batch
+      pod-template-hash: 6b44bb4568
+      team: shop
+    name: batch-6b44bb4568
+    namespace: shop
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: batch
+      uid: be59e5d2-4b9c-43d3-b835-f42df7a0b883
+    resourceVersion: "43533"
+    uid: 5e880358-429e-41df-ac66-a5a0ee5c39bb
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: batch
+        pod-template-hash: 6b44bb4568
+    template:
+      metadata:
+        labels:
+          app: batch
+          pod-template-hash: 6b44bb4568
+          team: shop
+      spec:
+        containers:
+        - env:
+          - name: MEMORY_MIB
+            value: "320"
+          - name: CPU_PERCENT
+            value: "1"
+          image: shop/batch:0.1
+          imagePullPolicy: IfNotPresent
+          name: batch
+          resources:
+            limits:
+              cpu: 300m
+              memory: 448Mi
+            requests:
+              cpu: 50m
+              memory: 48Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          kubernetes.io/hostname: lab4-worker
+        priorityClassName: shop-batch
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "4"
+      meta.helm.sh/release-name: shop
+      meta.helm.sh/release-namespace: shop
+    creationTimestamp: "2026-10-21T12:24:42Z"
+    generation: 2
+    labels:
+      app: batch
+      pod-template-hash: 7bd6db998c
+      team: shop
+    name: batch-7bd6db998c
+    namespace: shop
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: batch
+      uid: be59e5d2-4b9c-43d3-b835-f42df7a0b883
+    resourceVersion: "50727"
+    uid: f78ef5e9-f70a-4dbd-82aa-4b9c28ffe907
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: batch
+        pod-template-hash: 7bd6db998c
+    template:
+      metadata:
+        labels:
+          app: batch
+          pod-template-hash: 7bd6db998c
+          team: shop
+      spec:
+        containers:
+        - env:
+          - name: MEMORY_MIB
+            value: "96"
+          - name: CPU_PERCENT
+            value: "1"
+          image: shop/batch:0.2
+          imagePullPolicy: IfNotPresent
+          name: batch
+          resources:
+            limits:
+              cpu: 300m
+              memory: 448Mi
+            requests:
+              cpu: 50m
+              memory: 48Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          kubernetes.io/hostname: lab4-worker
+        priorityClassName: shop-batch
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "3"
+      meta.helm.sh/release-name: shop
+      meta.helm.sh/release-namespace: shop
+    creationTimestamp: "2026-10-21T12:12:06Z"
+    generation: 2
+    labels:
+      app: batch
+      pod-template-hash: 98fb5df89
+      team: shop
+    name: batch-98fb5df89
+    namespace: shop
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: batch
+      uid: be59e5d2-4b9c-43d3-b835-f42df7a0b883
+    resourceVersion: "46823"
+    uid: 904a65bb-fd47-499b-ac16-ce3006781cc1
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: batch
+        pod-template-hash: 98fb5df89
+    template:
+      metadata:
+        labels:
+          app: batch
+          pod-template-hash: 98fb5df89
+          team: shop
+      spec:
+        containers:
+        - env:
+          - name: MEMORY_MIB
+            value: "32"
+          - name: CPU_PERCENT
+            value: "1"
+          image: shop/batch:0.2
+          imagePullPolicy: IfNotPresent
+          name: batch
+          resources:
+            limits:
+              cpu: 300m
+              memory: 448Mi
+            requests:
+              cpu: 50m
+              memory: 48Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          kubernetes.io/hostname: lab4-worker
+        priorityClassName: shop-batch
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "5"
+      meta.helm.sh/release-name: shop
+      meta.helm.sh/release-namespace: shop
+    creationTimestamp: "2026-10-21T12:45:14Z"
+    generation: 2
+    labels:
+      app: batch
+      pod-template-hash: 998b59dc6
+      team: shop
+    name: batch-998b59dc6
+    namespace: shop
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: batch
+      uid: be59e5d2-4b9c-43d3-b835-f42df7a0b883
+    resourceVersion: "51357"
+    uid: d1ec67d8-4889-47fc-9698-a4a03e9c2423
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: batch
+        pod-template-hash: 998b59dc6
+    template:
+      metadata:
+        labels:
+          app: batch
+          pod-template-hash: 998b59dc6
+          team: shop
+      spec:
+        containers:
+        - env:
+          - name: MEMORY_MIB
+            value: "32"
+          - name: CPU_PERCENT
+            value: "1"
+          image: shop/batch:0.2
+          imagePullPolicy: IfNotPresent
+          name: batch
+          resources:
+            limits:
+              cpu: 300m
+              memory: 448Mi
+            requests:
+              cpu: 50m
+              memory: 48Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          kubernetes.io/hostname: lab4-worker
+        priorityClassName: shop-batch-low
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "2"
+      meta.helm.sh/release-name: shop
+      meta.helm.sh/release-namespace: shop
+    creationTimestamp: "2026-10-21T12:08:19Z"
+    generation: 2
+    labels:
+      app: batch
+      pod-template-hash: ddd8c684b
+      team: shop
+    name: batch-ddd8c684b
+    namespace: shop
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: batch
+      uid: be59e5d2-4b9c-43d3-b835-f42df7a0b883
+    resourceVersion: "44253"
+    uid: 1d4ed6a2-1279-46f8-9426-c87cf33b4ec9
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: batch
+        pod-template-hash: ddd8c684b
+    template:
+      metadata:
+        labels:
+          app: batch
+          pod-template-hash: ddd8c684b
+          team: shop
+      spec:
+        containers:
+        - env:
+          - name: MEMORY_MIB
+            value: "96"
+          - name: CPU_PERCENT
+            value: "1"
+          image: shop/batch:0.1
+          imagePullPolicy: IfNotPresent
+          name: batch
+          resources:
+            limits:
+              cpu: 300m
+              memory: 448Mi
+            requests:
+              cpu: 50m
+              memory: 48Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          kubernetes.io/hostname: lab4-worker
+        priorityClassName: shop-batch
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+kind: List
+metadata:
+  resourceVersion: ""

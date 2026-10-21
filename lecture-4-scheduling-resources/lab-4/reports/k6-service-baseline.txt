@@ -1,0 +1,811 @@
+time="2026-10-21T13:23:24Z" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxVUs\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: -
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 20 max VUs, 2m30s max duration (incl. graceful stop):
+              * orders: 10.00 iterations/s for 2m0s (maxVUs: 5-20, gracefulStop: 30s)
+
+
+running (0m00.8s), 07/07 VUs, 0 complete and 0 interrupted iterations
+orders   [   1% ] 07/07 VUs  0m00.8s/2m0s  10.00 iters/s
+
+running (0m01.8s), 12/12 VUs, 0 complete and 0 interrupted iterations
+orders   [   2% ] 12/12 VUs  0m01.8s/2m0s  10.00 iters/s
+
+running (0m02.8s), 17/17 VUs, 0 complete and 0 interrupted iterations
+orders   [   2% ] 17/17 VUs  0m02.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:28Z" level=warning msg="Insufficient VUs, reached 20 active VUs and cannot initialize more" executor=constant-arrival-rate scenario=orders
+
+running (0m03.8s), 20/20 VUs, 0 complete and 0 interrupted iterations
+orders   [   3% ] 20/20 VUs  0m03.8s/2m0s  10.00 iters/s
+
+running (0m04.8s), 20/20 VUs, 0 complete and 0 interrupted iterations
+orders   [   4% ] 20/20 VUs  0m04.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:30Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:30Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:30Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:30Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:30Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:30Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:30Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m05.9s), 20/20 VUs, 7 complete and 0 interrupted iterations
+orders   [   5% ] 20/20 VUs  0m05.9s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m06.8s), 19/20 VUs, 12 complete and 0 interrupted iterations
+orders   [   6% ] 19/20 VUs  0m06.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m07.8s), 20/20 VUs, 17 complete and 0 interrupted iterations
+orders   [   7% ] 20/20 VUs  0m07.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m08.8s), 20/20 VUs, 20 complete and 0 interrupted iterations
+orders   [   7% ] 20/20 VUs  0m08.8s/2m0s  10.00 iters/s
+
+running (0m09.8s), 20/20 VUs, 20 complete and 0 interrupted iterations
+orders   [   8% ] 20/20 VUs  0m09.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:35Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:35Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:35Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:35Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:35Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:35Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m10.8s), 20/20 VUs, 26 complete and 0 interrupted iterations
+orders   [   9% ] 20/20 VUs  0m10.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m11.8s), 20/20 VUs, 31 complete and 0 interrupted iterations
+orders   [  10% ] 20/20 VUs  0m11.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m12.8s), 19/20 VUs, 37 complete and 0 interrupted iterations
+orders   [  11% ] 19/20 VUs  0m12.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m13.8s), 20/20 VUs, 40 complete and 0 interrupted iterations
+orders   [  12% ] 20/20 VUs  0m13.8s/2m0s  10.00 iters/s
+
+running (0m14.8s), 20/20 VUs, 40 complete and 0 interrupted iterations
+orders   [  12% ] 20/20 VUs  0m14.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:40Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:40Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:40Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:40Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:40Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:40Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m15.8s), 19/20 VUs, 46 complete and 0 interrupted iterations
+orders   [  13% ] 19/20 VUs  0m15.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m16.8s), 19/20 VUs, 51 complete and 0 interrupted iterations
+orders   [  14% ] 19/20 VUs  0m16.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m17.8s), 19/20 VUs, 56 complete and 0 interrupted iterations
+orders   [  15% ] 19/20 VUs  0m17.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m18.8s), 20/20 VUs, 60 complete and 0 interrupted iterations
+orders   [  16% ] 20/20 VUs  0m18.8s/2m0s  10.00 iters/s
+
+running (0m19.8s), 20/20 VUs, 60 complete and 0 interrupted iterations
+orders   [  17% ] 20/20 VUs  0m19.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:45Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:45Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:45Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:45Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:45Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m20.8s), 20/20 VUs, 65 complete and 0 interrupted iterations
+orders   [  17% ] 20/20 VUs  0m20.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m21.8s), 20/20 VUs, 70 complete and 0 interrupted iterations
+orders   [  18% ] 20/20 VUs  0m21.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m22.8s), 20/20 VUs, 75 complete and 0 interrupted iterations
+orders   [  19% ] 20/20 VUs  0m22.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:48Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:48Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:48Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:48Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:48Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m23.8s), 20/20 VUs, 80 complete and 0 interrupted iterations
+orders   [  20% ] 20/20 VUs  0m23.8s/2m0s  10.00 iters/s
+
+running (0m24.8s), 20/20 VUs, 80 complete and 0 interrupted iterations
+orders   [  21% ] 20/20 VUs  0m24.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:50Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:50Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:50Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:50Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:50Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m25.8s), 19/20 VUs, 85 complete and 0 interrupted iterations
+orders   [  22% ] 19/20 VUs  0m25.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:51Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:51Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:51Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:51Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:51Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m26.8s), 20/20 VUs, 90 complete and 0 interrupted iterations
+orders   [  22% ] 20/20 VUs  0m26.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:52Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:52Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:52Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:52Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:52Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m27.8s), 19/20 VUs, 95 complete and 0 interrupted iterations
+orders   [  23% ] 19/20 VUs  0m27.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m28.8s), 19/20 VUs, 100 complete and 0 interrupted iterations
+orders   [  24% ] 19/20 VUs  0m28.8s/2m0s  10.00 iters/s
+
+running (0m29.8s), 20/20 VUs, 100 complete and 0 interrupted iterations
+orders   [  25% ] 20/20 VUs  0m29.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m30.8s), 19/20 VUs, 104 complete and 0 interrupted iterations
+orders   [  26% ] 19/20 VUs  0m30.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m31.8s), 19/20 VUs, 110 complete and 0 interrupted iterations
+orders   [  27% ] 19/20 VUs  0m31.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:57Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:57Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:57Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:57Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m32.8s), 20/20 VUs, 114 complete and 0 interrupted iterations
+orders   [  27% ] 20/20 VUs  0m32.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:58Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:58Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:58Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:58Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:23:58Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m33.8s), 20/20 VUs, 119 complete and 0 interrupted iterations
+orders   [  28% ] 20/20 VUs  0m33.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:23:59Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m34.8s), 20/20 VUs, 120 complete and 0 interrupted iterations
+orders   [  29% ] 20/20 VUs  0m34.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:00Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:00Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:00Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m35.8s), 19/20 VUs, 123 complete and 0 interrupted iterations
+orders   [  30% ] 19/20 VUs  0m35.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m36.8s), 19/20 VUs, 129 complete and 0 interrupted iterations
+orders   [  31% ] 19/20 VUs  0m36.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m37.8s), 19/20 VUs, 134 complete and 0 interrupted iterations
+orders   [  32% ] 19/20 VUs  0m37.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m38.8s), 19/20 VUs, 139 complete and 0 interrupted iterations
+orders   [  32% ] 19/20 VUs  0m38.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:04Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m39.8s), 20/20 VUs, 140 complete and 0 interrupted iterations
+orders   [  33% ] 20/20 VUs  0m39.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:05Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:05Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m40.8s), 19/20 VUs, 142 complete and 0 interrupted iterations
+orders   [  34% ] 19/20 VUs  0m40.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m41.8s), 20/20 VUs, 148 complete and 0 interrupted iterations
+orders   [  35% ] 20/20 VUs  0m41.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:07Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:07Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:07Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:07Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:07Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m42.8s), 20/20 VUs, 153 complete and 0 interrupted iterations
+orders   [  36% ] 20/20 VUs  0m42.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m43.8s), 20/20 VUs, 158 complete and 0 interrupted iterations
+orders   [  37% ] 20/20 VUs  0m43.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:09Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:09Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m44.8s), 20/20 VUs, 160 complete and 0 interrupted iterations
+orders   [  37% ] 20/20 VUs  0m44.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:10Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m45.8s), 20/20 VUs, 161 complete and 0 interrupted iterations
+orders   [  38% ] 20/20 VUs  0m45.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m46.8s), 19/20 VUs, 168 complete and 0 interrupted iterations
+orders   [  39% ] 19/20 VUs  0m46.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m47.8s), 19/20 VUs, 173 complete and 0 interrupted iterations
+orders   [  40% ] 19/20 VUs  0m47.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:13Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:13Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:13Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:13Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:13Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m48.8s), 19/20 VUs, 178 complete and 0 interrupted iterations
+orders   [  41% ] 19/20 VUs  0m48.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:14Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:14Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m49.8s), 20/20 VUs, 180 complete and 0 interrupted iterations
+orders   [  42% ] 20/20 VUs  0m49.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:15Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m50.8s), 19/20 VUs, 181 complete and 0 interrupted iterations
+orders   [  42% ] 19/20 VUs  0m50.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m51.8s), 20/20 VUs, 187 complete and 0 interrupted iterations
+orders   [  43% ] 20/20 VUs  0m51.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m52.8s), 20/20 VUs, 192 complete and 0 interrupted iterations
+orders   [  44% ] 20/20 VUs  0m52.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:18Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:18Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:18Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:18Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:18Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m53.8s), 20/20 VUs, 197 complete and 0 interrupted iterations
+orders   [  45% ] 20/20 VUs  0m53.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:19Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:19Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:19Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m54.8s), 20/20 VUs, 200 complete and 0 interrupted iterations
+orders   [  46% ] 20/20 VUs  0m54.8s/2m0s  10.00 iters/s
+
+running (0m55.8s), 20/20 VUs, 200 complete and 0 interrupted iterations
+orders   [  47% ] 20/20 VUs  0m55.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:21Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:21Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:21Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:21Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:21Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:21Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:21Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m56.8s), 19/20 VUs, 207 complete and 0 interrupted iterations
+orders   [  47% ] 19/20 VUs  0m56.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:22Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:22Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:22Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:22Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:22Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m57.8s), 19/20 VUs, 212 complete and 0 interrupted iterations
+orders   [  48% ] 19/20 VUs  0m57.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:23Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:23Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:23Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:23Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:23Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m58.8s), 20/20 VUs, 217 complete and 0 interrupted iterations
+orders   [  49% ] 20/20 VUs  0m58.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:24Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:24Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:24Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (0m59.8s), 20/20 VUs, 220 complete and 0 interrupted iterations
+orders   [  50% ] 20/20 VUs  0m59.8s/2m0s  10.00 iters/s
+
+running (1m00.8s), 20/20 VUs, 220 complete and 0 interrupted iterations
+orders   [  51% ] 20/20 VUs  1m00.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:26Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:26Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:26Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:26Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:26Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:26Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m01.8s), 20/20 VUs, 226 complete and 0 interrupted iterations
+orders   [  52% ] 20/20 VUs  1m01.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:27Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:27Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:27Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:27Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:27Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m02.8s), 20/20 VUs, 231 complete and 0 interrupted iterations
+orders   [  52% ] 20/20 VUs  1m02.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:28Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:28Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:28Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:28Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:28Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:28Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m03.8s), 19/20 VUs, 237 complete and 0 interrupted iterations
+orders   [  53% ] 19/20 VUs  1m03.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:29Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:29Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:29Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m04.8s), 20/20 VUs, 240 complete and 0 interrupted iterations
+orders   [  54% ] 20/20 VUs  1m04.8s/2m0s  10.00 iters/s
+
+running (1m05.8s), 20/20 VUs, 240 complete and 0 interrupted iterations
+orders   [  55% ] 20/20 VUs  1m05.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:31Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m06.8s), 19/20 VUs, 246 complete and 0 interrupted iterations
+orders   [  56% ] 19/20 VUs  1m06.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:32Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m07.8s), 19/20 VUs, 251 complete and 0 interrupted iterations
+orders   [  57% ] 19/20 VUs  1m07.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:33Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m08.8s), 19/20 VUs, 256 complete and 0 interrupted iterations
+orders   [  57% ] 19/20 VUs  1m08.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:34Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:34Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:34Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:34Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m09.8s), 20/20 VUs, 260 complete and 0 interrupted iterations
+orders   [  58% ] 20/20 VUs  1m09.8s/2m0s  10.00 iters/s
+
+running (1m10.8s), 20/20 VUs, 260 complete and 0 interrupted iterations
+orders   [  59% ] 20/20 VUs  1m10.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:36Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m11.8s), 20/20 VUs, 265 complete and 0 interrupted iterations
+orders   [  60% ] 20/20 VUs  1m11.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:37Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m12.8s), 20/20 VUs, 270 complete and 0 interrupted iterations
+orders   [  61% ] 20/20 VUs  1m12.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:38Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m13.8s), 20/20 VUs, 275 complete and 0 interrupted iterations
+orders   [  62% ] 20/20 VUs  1m13.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:39Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:39Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:39Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:39Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:39Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m14.8s), 20/20 VUs, 280 complete and 0 interrupted iterations
+orders   [  62% ] 20/20 VUs  1m14.8s/2m0s  10.00 iters/s
+
+running (1m15.8s), 20/20 VUs, 280 complete and 0 interrupted iterations
+orders   [  63% ] 20/20 VUs  1m15.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:41Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m16.8s), 19/20 VUs, 285 complete and 0 interrupted iterations
+orders   [  64% ] 19/20 VUs  1m16.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:42Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m17.8s), 20/20 VUs, 290 complete and 0 interrupted iterations
+orders   [  65% ] 20/20 VUs  1m17.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:43Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m18.8s), 19/20 VUs, 295 complete and 0 interrupted iterations
+orders   [  66% ] 19/20 VUs  1m18.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:44Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:44Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:44Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:44Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:44Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m19.8s), 19/20 VUs, 300 complete and 0 interrupted iterations
+orders   [  67% ] 19/20 VUs  1m19.8s/2m0s  10.00 iters/s
+
+running (1m20.8s), 20/20 VUs, 300 complete and 0 interrupted iterations
+orders   [  67% ] 20/20 VUs  1m20.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:46Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m21.8s), 19/20 VUs, 304 complete and 0 interrupted iterations
+orders   [  68% ] 19/20 VUs  1m21.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:47Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m22.8s), 17/20 VUs, 313 complete and 0 interrupted iterations
+orders   [  69% ] 17/20 VUs  1m22.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:48Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m23.8s), 11/20 VUs, 329 complete and 0 interrupted iterations
+orders   [  70% ] 11/20 VUs  1m23.8s/2m0s  10.00 iters/s
+
+running (1m24.8s), 19/20 VUs, 331 complete and 0 interrupted iterations
+orders   [  71% ] 19/20 VUs  1m24.8s/2m0s  10.00 iters/s
+
+running (1m25.8s), 20/20 VUs, 334 complete and 0 interrupted iterations
+orders   [  72% ] 20/20 VUs  1m25.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:51Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m26.8s), 20/20 VUs, 338 complete and 0 interrupted iterations
+orders   [  72% ] 20/20 VUs  1m26.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m28.1s), 19/20 VUs, 342 complete and 0 interrupted iterations
+orders   [  73% ] 19/20 VUs  1m28.2s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:53Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m28.8s), 19/20 VUs, 349 complete and 0 interrupted iterations
+orders   [  74% ] 19/20 VUs  1m28.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:54Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:54Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:54Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m29.8s), 20/20 VUs, 353 complete and 0 interrupted iterations
+orders   [  75% ] 20/20 VUs  1m29.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:55Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m30.8s), 20/20 VUs, 359 complete and 0 interrupted iterations
+orders   [  76% ] 20/20 VUs  1m30.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:56Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m31.8s), 20/20 VUs, 363 complete and 0 interrupted iterations
+orders   [  77% ] 20/20 VUs  1m31.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:57Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m32.8s), 20/20 VUs, 368 complete and 0 interrupted iterations
+orders   [  77% ] 20/20 VUs  1m32.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:58Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:58Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m33.8s), 20/20 VUs, 375 complete and 0 interrupted iterations
+orders   [  78% ] 20/20 VUs  1m33.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:24:59Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:24:59Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m34.8s), 20/20 VUs, 380 complete and 0 interrupted iterations
+orders   [  79% ] 20/20 VUs  1m34.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:00Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m35.8s), 20/20 VUs, 384 complete and 0 interrupted iterations
+orders   [  80% ] 20/20 VUs  1m35.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:01Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m36.8s), 20/20 VUs, 389 complete and 0 interrupted iterations
+orders   [  81% ] 20/20 VUs  1m36.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:02Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m37.8s), 20/20 VUs, 395 complete and 0 interrupted iterations
+orders   [  82% ] 20/20 VUs  1m37.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:03Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m38.8s), 17/20 VUs, 405 complete and 0 interrupted iterations
+orders   [  82% ] 17/20 VUs  1m38.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:04Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m39.8s), 20/20 VUs, 407 complete and 0 interrupted iterations
+orders   [  83% ] 20/20 VUs  1m39.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:05Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:05Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m40.8s), 20/20 VUs, 411 complete and 0 interrupted iterations
+orders   [  84% ] 20/20 VUs  1m40.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m41.8s), 17/20 VUs, 419 complete and 0 interrupted iterations
+orders   [  85% ] 17/20 VUs  1m41.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:06Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:07Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m42.8s), 20/20 VUs, 422 complete and 0 interrupted iterations
+orders   [  86% ] 20/20 VUs  1m42.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:08Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m43.8s), 19/20 VUs, 428 complete and 0 interrupted iterations
+orders   [  87% ] 19/20 VUs  1m43.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:09Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:09Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:09Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m44.8s), 20/20 VUs, 434 complete and 0 interrupted iterations
+orders   [  87% ] 20/20 VUs  1m44.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:10Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m45.8s), 20/20 VUs, 439 complete and 0 interrupted iterations
+orders   [  88% ] 20/20 VUs  1m45.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:11Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m46.8s), 20/20 VUs, 444 complete and 0 interrupted iterations
+orders   [  89% ] 20/20 VUs  1m46.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:12Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m47.8s), 20/20 VUs, 451 complete and 0 interrupted iterations
+orders   [  90% ] 20/20 VUs  1m47.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:13Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:13Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m48.8s), 19/20 VUs, 456 complete and 0 interrupted iterations
+orders   [  91% ] 19/20 VUs  1m48.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:14Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m49.8s), 20/20 VUs, 460 complete and 0 interrupted iterations
+orders   [  92% ] 20/20 VUs  1m49.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:15Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:15Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:15Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:15Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m50.8s), 20/20 VUs, 467 complete and 0 interrupted iterations
+orders   [  92% ] 20/20 VUs  1m50.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:16Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m51.8s), 20/20 VUs, 472 complete and 0 interrupted iterations
+orders   [  93% ] 20/20 VUs  1m51.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:17Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m52.8s), 19/20 VUs, 480 complete and 0 interrupted iterations
+orders   [  94% ] 19/20 VUs  1m52.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:18Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+time="2026-10-21T13:25:18Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m53.8s), 20/20 VUs, 485 complete and 0 interrupted iterations
+orders   [  95% ] 20/20 VUs  1m53.8s/2m0s  10.00 iters/s
+time="2026-10-21T13:25:19Z" level=warning msg="Request Failed" error="Post \"http://10.96.80.1:8080/order\": request timeout"
+
+running (1m54.8s), 19/20 VUs, 490 complete and 0 interrupted iterations
+orders   [  96% ] 19/20 VUs  1m54.8s/2m0s  10.00 iters/s
+
+running (1m55.8s), 10/20 VUs, 509 complete and 0 interrupted iterations
+orders   [  97% ] 10/20 VUs  1m55.8s/2m0s  10.00 iters/s
+
+running (1m56.8s), 03/20 VUs, 526 complete and 0 interrupted iterations
+orders   [  97% ] 03/20 VUs  1m56.8s/2m0s  10.00 iters/s
+
+running (1m57.8s), 01/20 VUs, 538 complete and 0 interrupted iterations
+orders   [  98% ] 01/20 VUs  1m57.8s/2m0s  10.00 iters/s
+
+running (1m58.8s), 00/20 VUs, 549 complete and 0 interrupted iterations
+orders   [  99% ] 00/20 VUs  1m58.8s/2m0s  10.00 iters/s
+
+running (1m59.8s), 01/20 VUs, 558 complete and 0 interrupted iterations
+orders   [ 100% ] 01/20 VUs  1m59.8s/2m0s  10.00 iters/s
+
+running (2m00.3s), 00/20 VUs, 561 complete and 0 interrupted iterations
+orders ✓ [ 100% ] 00/20 VUs  2m0s  10.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✗ 'rate>0.99' rate=13.36%
+
+    dropped_iterations
+    ✗ 'count==0' count=640
+
+    http_req_duration
+    ✗ 'p(95)<300' p(95)=5s
+
+    http_req_failed
+    ✗ 'rate<0.01' rate=86.63%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 561    4.663566/s
+    checks_succeeded...: 13.36% 75 out of 561
+    checks_failed......: 86.63% 486 out of 561
+
+    ✗ order created
+      ↳  13% — ✓ 75 / ✗ 486
+
+    HTTP
+    http_req_duration..............: avg=3.96s min=2.09ms med=4.99s    max=5.54s p(90)=5s    p(95)=5s   
+      { expected_response:true }...: avg=1s    min=2.09ms med=274.45ms max=4.97s p(90)=3.49s p(95)=3.86s
+    http_req_failed................: 86.63% 486 out of 561
+    http_reqs......................: 561    4.663566/s
+
+    EXECUTION
+    dropped_iterations.............: 640    5.320289/s
+    iteration_duration.............: avg=3.96s min=2.59ms med=5s       max=5.54s p(90)=5s    p(95)=5s   
+    iterations.....................: 561    4.663566/s
+    vus............................: 1      min=0          max=20
+    vus_max........................: 20     min=7          max=20
+
+    NETWORK
+    data_received..................: 32 kB  264 B/s
+    data_sent......................: 94 kB  784 B/s
+
+
+
+
+running (2m00.3s), 00/20 VUs, 561 complete and 0 interrupted iterations
+orders ✓ [ 100% ] 00/20 VUs  2m0s  10.00 iters/s
+time="2026-10-21T13:25:27Z" level=error msg="thresholds on metrics 'checks, dropped_iterations, http_req_duration, http_req_failed' have been crossed"

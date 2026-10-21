@@ -16,6 +16,9 @@ for offset in range(0, len(data), 4096):
 print(f"Allocated {memory_mib} MiB; CPU duty cycle {cpu_percent}%", flush=True)
 
 while True:
+    for offset in range(0, len(data), 4096):
+        data[offset] = (data[offset] + 1) % 256
+
     start = time.monotonic()
     busy_until = start + cpu_percent / 100
     while time.monotonic() < busy_until:

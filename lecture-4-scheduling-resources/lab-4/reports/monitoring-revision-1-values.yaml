@@ -1,0 +1,37 @@
+USER-SUPPLIED VALUES:
+alertmanager:
+  enabled: false
+grafana:
+  adminPassword: admin
+  defaultDashboardsEnabled: false
+  resources:
+    limits:
+      cpu: 300m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi
+prometheus:
+  prometheusSpec:
+    evaluationInterval: 30s
+    resources:
+      limits:
+        cpu: 500m
+        memory: 768Mi
+      requests:
+        cpu: 100m
+        memory: 256Mi
+    retention: 24h
+    ruleNamespaceSelector: {}
+    ruleSelectorNilUsesHelmValues: false
+    scrapeInterval: 30s
+    serviceMonitorNamespaceSelector: {}
+    serviceMonitorSelectorNilUsesHelmValues: false
+prometheusOperator:
+  resources:
+    limits:
+      cpu: 300m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi

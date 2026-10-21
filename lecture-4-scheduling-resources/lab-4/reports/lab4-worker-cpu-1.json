@@ -1,0 +1,2763 @@
+{
+ "node": {
+  "nodeName": "lab4-worker",
+  "systemContainers": [
+   {
+    "name": "kubelet",
+    "startTime": "2026-10-21T14:24:59Z",
+    "cpu": {
+     "time": "2026-10-21T16:05:41Z",
+     "usageNanoCores": 0,
+     "usageCoreNanoSeconds": 0,
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "memory": {
+     "time": "2026-10-21T16:05:41Z",
+     "usageBytes": 59916288,
+     "workingSetBytes": 55955456,
+     "rssBytes": 44883968,
+     "pageFaults": 223189,
+     "majorPageFaults": 13679,
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "io": {
+     "time": "2026-10-21T16:05:41Z",
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "swap": {
+     "time": "2026-10-21T16:05:41Z",
+     "swapUsageBytes": 9502720
+    }
+   },
+   {
+    "name": "runtime",
+    "startTime": "2026-10-21T11:39:18Z",
+    "cpu": {
+     "time": "2026-10-21T16:05:33Z",
+     "usageNanoCores": 0,
+     "usageCoreNanoSeconds": 0,
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "memory": {
+     "time": "2026-10-21T16:05:33Z",
+     "usageBytes": 94093312,
+     "workingSetBytes": 89575424,
+     "rssBytes": 73027584,
+     "pageFaults": 1158288,
+     "majorPageFaults": 52849,
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "swap": {
+     "time": "2026-10-21T16:05:33Z",
+     "swapUsageBytes": 22929408
+    }
+   },
+   {
+    "name": "pods",
+    "startTime": "2026-10-21T11:39:28Z",
+    "cpu": {
+     "time": "2026-10-21T16:05:38Z",
+     "usageNanoCores": 1141960167,
+     "usageCoreNanoSeconds": 5120810604000,
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "memory": {
+     "time": "2026-10-21T16:05:38Z",
+     "availableBytes": 3293179904,
+     "usageBytes": 783609856,
+     "workingSetBytes": 710307840,
+     "rssBytes": 563589120,
+     "pageFaults": 0,
+     "majorPageFaults": 0,
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "io": {
+     "time": "2026-10-21T16:05:38Z",
+     "psi": {
+      "full": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      },
+      "some": {
+       "total": 0,
+       "avg10": 0,
+       "avg60": 0,
+       "avg300": 0
+      }
+     }
+    },
+    "swap": {
+     "time": "2026-10-21T16:05:38Z",
+     "swapUsageBytes": 245055488
+    }
+   }
+  ],
+  "startTime": "2026-10-21T11:38:38Z",
+  "cpu": {
+   "time": "2026-10-21T16:05:38Z",
+   "usageNanoCores": 4474350740,
+   "usageCoreNanoSeconds": 8492516816300,
+   "psi": {
+    "full": {
+     "total": 0,
+     "avg10": 0,
+     "avg60": 0,
+     "avg300": 0
+    },
+    "some": {
+     "total": 0,
+     "avg10": 0,
+     "avg60": 0,
+     "avg300": 0
+    }
+   }
+  },
+  "memory": {
+   "time": "2026-10-21T16:05:38Z",
+   "availableBytes": 3141795840,
+   "usageBytes": 943448064,
+   "workingSetBytes": 861691904,
+   "rssBytes": 682573824,
+   "pageFaults": 61251,
+   "majorPageFaults": 985,
+   "psi": {
+    "full": {
+     "total": 0,
+     "avg10": 0,
+     "avg60": 0,
+     "avg300": 0
+    },
+    "some": {
+     "total": 0,
+     "avg10": 0,
+     "avg60": 0,
+     "avg300": 0
+    }
+   }
+  },
+  "io": {
+   "time": "2026-10-21T16:05:38Z",
+   "psi": {
+    "full": {
+     "total": 0,
+     "avg10": 0,
+     "avg60": 0,
+     "avg300": 0
+    },
+    "some": {
+     "total": 0,
+     "avg10": 0,
+     "avg60": 0,
+     "avg300": 0
+    }
+   }
+  },
+  "network": {
+   "time": "2026-10-21T16:05:38Z",
+   "name": "eth0",
+   "rxBytes": 227691819,
+   "rxErrors": 0,
+   "txBytes": 349012055,
+   "txErrors": 0,
+   "interfaces": [
+    {
+     "name": "eth0",
+     "rxBytes": 227691819,
+     "rxErrors": 0,
+     "txBytes": 349012055,
+     "txErrors": 0
+    }
+   ]
+  },
+  "fs": {
+   "time": "2026-10-21T16:05:38Z",
+   "availableBytes": 974953263104,
+   "capacityBytes": 1081101176832,
+   "usedBytes": 51155558400,
+   "inodesFree": 66461013,
+   "inodes": 67108864,
+   "inodesUsed": 647851
+  },
+  "runtime": {
+   "imageFs": {
+    "time": "2026-10-21T16:05:35Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 3291000832,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 60919
+   },
+   "containerFs": {
+    "time": "2026-10-21T16:05:35Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 3291000832,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 60919
+   }
+  },
+  "rlimit": {
+   "time": "2026-10-21T16:05:44Z",
+   "maxpid": 30489,
+   "curproc": 1646
+  },
+  "swap": {
+   "time": "2026-10-21T16:05:38Z",
+   "swapAvailableBytes": 780517376,
+   "swapUsageBytes": 293224448
+  }
+ },
+ "pods": [
+  {
+   "podRef": {
+    "name": "kindnet-jng2h",
+    "namespace": "kube-system",
+    "uid": "ac2d9d88-b1f3-4626-b10a-520a4ded1007"
+   },
+   "startTime": "2026-10-21T11:39:58Z",
+   "containers": [
+    {
+     "name": "kindnet-cni",
+     "startTime": "2026-10-21T11:40:08Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:41Z",
+      "usageNanoCores": 19587459,
+      "usageCoreNanoSeconds": 181810815400,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:41Z",
+      "availableBytes": 34586624,
+      "usageBytes": 24383488,
+      "workingSetBytes": 17842176,
+      "rssBytes": 10854400,
+      "pageFaults": 209105,
+      "majorPageFaults": 23905,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:41Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 73728,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 26
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 856064,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 2
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:41Z",
+      "swapAvailableBytes": 50810880,
+      "swapUsageBytes": 1617920
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:37Z",
+    "usageNanoCores": 35766689,
+    "usageCoreNanoSeconds": 182087259800,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:37Z",
+    "availableBytes": 34447360,
+    "usageBytes": 24543232,
+    "workingSetBytes": 17981440,
+    "rssBytes": 10907648,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:37Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:31Z",
+    "name": "eth0",
+    "rxBytes": 227654611,
+    "rxErrors": 0,
+    "txBytes": 348894908,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 227654611,
+      "rxErrors": 0,
+      "txBytes": 348894908,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:05:39Z",
+     "availableBytes": 52416512,
+     "capacityBytes": 52428800,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-xvs28"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 933888,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 29
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:37Z",
+    "swapUsageBytes": 1609728
+   }
+  },
+  {
+   "podRef": {
+    "name": "kube-proxy-hfn76",
+    "namespace": "kube-system",
+    "uid": "94de2e32-f60b-4d99-8836-97714085501c"
+   },
+   "startTime": "2026-10-21T11:39:56Z",
+   "containers": [
+    {
+     "name": "kube-proxy",
+     "startTime": "2026-10-21T11:40:06Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:30Z",
+      "usageNanoCores": 12005101,
+      "usageCoreNanoSeconds": 177167652400,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:30Z",
+      "usageBytes": 22384640,
+      "workingSetBytes": 18313216,
+      "rssBytes": 10850304,
+      "pageFaults": 250674,
+      "majorPageFaults": 27300,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:30Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 69632,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 25
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 16384,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 2
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:30Z",
+      "swapUsageBytes": 4988928
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:36Z",
+    "usageNanoCores": 1606631,
+    "usageCoreNanoSeconds": 177251573400,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:36Z",
+    "usageBytes": 22265856,
+    "workingSetBytes": 17985536,
+    "rssBytes": 10833920,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:36Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:25Z",
+    "name": "eth0",
+    "rxBytes": 227624709,
+    "rxErrors": 0,
+    "txBytes": 348841425,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 227624709,
+      "rxErrors": 0,
+      "txBytes": 348841425,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:05:09Z",
+     "availableBytes": 974953603072,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 16384,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 7,
+     "name": "kube-proxy"
+    },
+    {
+     "time": "2026-10-21T16:05:09Z",
+     "availableBytes": 962600960,
+     "capacityBytes": 962613248,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-4fszz"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 106496,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 35
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:36Z",
+    "swapUsageBytes": 5074944
+   }
+  },
+  {
+   "podRef": {
+    "name": "monitoring-kube-state-metrics-7b5bd68446-njw5n",
+    "namespace": "monitoring",
+    "uid": "855f1beb-da33-4f0f-88d1-1061b9b0d108"
+   },
+   "startTime": "2026-10-21T11:40:04Z",
+   "containers": [
+    {
+     "name": "kube-state-metrics",
+     "startTime": "2026-10-21T15:36:04Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:35Z",
+      "usageNanoCores": 34043122,
+      "usageCoreNanoSeconds": 47085842600,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:35Z",
+      "usageBytes": 31031296,
+      "workingSetBytes": 23449600,
+      "rssBytes": 16818176,
+      "pageFaults": 21550,
+      "majorPageFaults": 6435,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:35Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 36864,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 11
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 16384,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 2
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:35Z",
+      "swapUsageBytes": 4153344
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:41Z",
+    "usageNanoCores": 32692596,
+    "usageCoreNanoSeconds": 336243600500,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:41Z",
+    "usageBytes": 31506432,
+    "workingSetBytes": 23932928,
+    "rssBytes": 16875520,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:41Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:43Z",
+    "name": "eth0",
+    "rxBytes": 69093815,
+    "rxErrors": 0,
+    "txBytes": 211394201,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 69093815,
+      "rxErrors": 0,
+      "txBytes": 211394201,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:05:24Z",
+     "availableBytes": 962605056,
+     "capacityBytes": 962617344,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-54n9m"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 57344,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 14
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:41Z",
+    "swapUsageBytes": 4153344
+   }
+  },
+  {
+   "podRef": {
+    "name": "shop-db-1",
+    "namespace": "shop",
+    "uid": "7470cebc-6d42-46f0-a12e-db94ae0198ed"
+   },
+   "startTime": "2026-10-21T13:36:03Z",
+   "containers": [
+    {
+     "name": "postgres",
+     "startTime": "2026-10-21T15:44:01Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:32Z",
+      "usageNanoCores": 115137995,
+      "usageCoreNanoSeconds": 147746508000,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:32Z",
+      "availableBytes": 66617344,
+      "usageBytes": 64290816,
+      "workingSetBytes": 56066048,
+      "rssBytes": 18493440,
+      "pageFaults": 560245,
+      "majorPageFaults": 9976,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:32Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 40960,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 9
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 188416,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 2
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:32Z",
+      "swapAvailableBytes": 93761536,
+      "swapUsageBytes": 28921856
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:41Z",
+    "usageNanoCores": 205192150,
+    "usageCoreNanoSeconds": 889207875100,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:41Z",
+    "availableBytes": 63606784,
+    "usageBytes": 65609728,
+    "workingSetBytes": 59076608,
+    "rssBytes": 18534400,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:41Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:32Z",
+    "name": "eth0",
+    "rxBytes": 36062796,
+    "rxErrors": 0,
+    "txBytes": 20406903,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 36062796,
+      "rxErrors": 0,
+      "txBytes": 20406903,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:04:45Z",
+     "availableBytes": 974953754624,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 65814528,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 20,
+     "name": "scratch-data"
+    },
+    {
+     "time": "2026-10-21T16:04:45Z",
+     "availableBytes": 121597952,
+     "capacityBytes": 122683392,
+     "usedBytes": 1085440,
+     "inodesFree": 488704,
+     "inodes": 488707,
+     "inodesUsed": 3,
+     "name": "shm"
+    },
+    {
+     "time": "2026-10-21T16:04:45Z",
+     "availableBytes": 122671104,
+     "capacityBytes": 122683392,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-9cggl"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 66048000,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 32
+   },
+   "process_stats": {
+    "process_count": 17
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:41Z",
+    "swapUsageBytes": 28950528
+   }
+  },
+  {
+   "podRef": {
+    "name": "monitoring-grafana-56bb596c8d-gsbhj",
+    "namespace": "monitoring",
+    "uid": "2d2054be-216d-4e98-90f4-01e6a0465301"
+   },
+   "startTime": "2026-10-21T14:58:59Z",
+   "containers": [
+    {
+     "name": "grafana",
+     "startTime": "2026-10-21T14:59:02Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:35Z",
+      "usageNanoCores": 539088572,
+      "usageCoreNanoSeconds": 967899969300,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 97820672,
+      "usageBytes": 472981504,
+      "workingSetBytes": 439050240,
+      "rssBytes": 390115328,
+      "pageFaults": 2574630,
+      "majorPageFaults": 1160829,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:35Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 69632,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 17
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 663552,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 1
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:35Z",
+      "swapAvailableBytes": 472981504,
+      "swapUsageBytes": 63889408
+     }
+    },
+    {
+     "name": "grafana-sc-dashboard",
+     "startTime": "2026-10-21T14:58:59Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:40Z",
+      "usageNanoCores": 1439140,
+      "usageCoreNanoSeconds": 70482588500,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:40Z",
+      "usageBytes": 17715200,
+      "workingSetBytes": 17448960,
+      "rssBytes": 12034048,
+      "pageFaults": 183543,
+      "majorPageFaults": 4292,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:40Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 36864,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 10
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 40960,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 1
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:40Z",
+      "swapUsageBytes": 65093632
+     }
+    },
+    {
+     "name": "grafana-sc-datasources",
+     "startTime": "2026-10-21T14:59:00Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:43Z",
+      "usageNanoCores": 534590,
+      "usageCoreNanoSeconds": 68171139800,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:43Z",
+      "usageBytes": 14159872,
+      "workingSetBytes": 14032896,
+      "rssBytes": 11862016,
+      "pageFaults": 181893,
+      "majorPageFaults": 3967,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:43Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 40960,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 11
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 49152,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 1
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:43Z",
+      "swapUsageBytes": 65355776
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:42Z",
+    "usageNanoCores": 579620906,
+    "usageCoreNanoSeconds": 1110734161900,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:42Z",
+    "usageBytes": 497176576,
+    "workingSetBytes": 459296768,
+    "rssBytes": 407003136,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:42Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:39Z",
+    "name": "eth0",
+    "rxBytes": 26005535,
+    "rxErrors": 0,
+    "txBytes": 8744797,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 26005535,
+      "rxErrors": 0,
+      "txBytes": 8744797,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:05:32Z",
+     "availableBytes": 974953332736,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 8192,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 15,
+     "name": "tmp"
+    },
+    {
+     "time": "2026-10-21T16:05:32Z",
+     "availableBytes": 974953332736,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 12288,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 5,
+     "name": "sc-dashboard-provider"
+    },
+    {
+     "time": "2026-10-21T16:05:32Z",
+     "availableBytes": 974953332736,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 8192,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 2,
+     "name": "sc-datasources-volume"
+    },
+    {
+     "time": "2026-10-21T16:05:32Z",
+     "availableBytes": 974953328640,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 12288,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 5,
+     "name": "config"
+    },
+    {
+     "time": "2026-10-21T16:05:32Z",
+     "availableBytes": 974953328640,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 8192,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 2,
+     "name": "search"
+    },
+    {
+     "time": "2026-10-21T16:05:32Z",
+     "availableBytes": 974953328640,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 54951936,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 669,
+     "name": "storage"
+    },
+    {
+     "time": "2026-10-21T16:05:33Z",
+     "availableBytes": 974953328640,
+     "capacityBytes": 1081101176832,
+     "usedBytes": 12288,
+     "inodesFree": 66461013,
+     "inodes": 67108864,
+     "inodesUsed": 2,
+     "name": "sc-dashboard-volume"
+    },
+    {
+     "time": "2026-10-21T16:05:32Z",
+     "availableBytes": 4003475456,
+     "capacityBytes": 4003487744,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-xf6dc"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 55918592,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 742
+   },
+   "process_stats": {
+    "process_count": 16
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:42Z",
+    "swapUsageBytes": 200073216
+   }
+  },
+  {
+   "podRef": {
+    "name": "api-668b49898-5rp5n",
+    "namespace": "shop",
+    "uid": "49a68043-4182-4e05-a888-901fd5e75192"
+   },
+   "startTime": "2026-10-21T15:52:34Z",
+   "containers": [
+    {
+     "name": "api",
+     "startTime": "2026-10-21T15:52:35Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:41Z",
+      "usageNanoCores": 5344035,
+      "usageCoreNanoSeconds": 7014061800,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:41Z",
+      "availableBytes": 91316224,
+      "usageBytes": 14401536,
+      "workingSetBytes": 13541376,
+      "rssBytes": 11399168,
+      "pageFaults": 7096,
+      "majorPageFaults": 319,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:41Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 45056,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 14
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 61440,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 1
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:41Z",
+      "swapAvailableBytes": 104341504,
+      "swapUsageBytes": 516096
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:36Z",
+    "usageNanoCores": 6835359,
+    "usageCoreNanoSeconds": 7250382500,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:36Z",
+    "availableBytes": 90980352,
+    "usageBytes": 14745600,
+    "workingSetBytes": 13877248,
+    "rssBytes": 11452416,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:36Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:43Z",
+    "name": "eth0",
+    "rxBytes": 192227,
+    "rxErrors": 0,
+    "txBytes": 261708,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 192227,
+      "rxErrors": 0,
+      "txBytes": 261708,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:04:54Z",
+     "availableBytes": 104845312,
+     "capacityBytes": 104857600,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-nhmtb"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 110592,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 16
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:36Z",
+    "swapUsageBytes": 479232
+   }
+  },
+  {
+   "podRef": {
+    "name": "monitoring-prometheus-node-exporter-ddfsn",
+    "namespace": "monitoring",
+    "uid": "0d241e3d-7cae-4cf0-be4d-186ff2cad5c6"
+   },
+   "startTime": "2026-10-21T11:39:56Z",
+   "containers": [
+    {
+     "name": "node-exporter",
+     "startTime": "2026-10-21T11:40:05Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:39Z",
+      "usageNanoCores": 30702756,
+      "usageCoreNanoSeconds": 176914287600,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:39Z",
+      "usageBytes": 16125952,
+      "workingSetBytes": 13205504,
+      "rssBytes": 8028160,
+      "pageFaults": 102995,
+      "majorPageFaults": 6554,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:39Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 28672,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 10
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 16384,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 2
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:39Z",
+      "swapUsageBytes": 1703936
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:31Z",
+    "usageNanoCores": 58177231,
+    "usageCoreNanoSeconds": 177490673100,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:31Z",
+    "usageBytes": 16355328,
+    "workingSetBytes": 13426688,
+    "rssBytes": 8073216,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:31Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:28Z",
+    "name": "eth0",
+    "rxBytes": 227644935,
+    "rxErrors": 0,
+    "txBytes": 348886604,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 227644935,
+      "rxErrors": 0,
+      "txBytes": 348886604,
+      "txErrors": 0
+     }
+    ]
+   },
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 49152,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 13
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:31Z",
+    "swapUsageBytes": 1683456
+   }
+  },
+  {
+   "podRef": {
+    "name": "batch-998b59dc6-mwk64",
+    "namespace": "shop",
+    "uid": "faa37ed0-8c13-41d9-a129-6b6786e52d27"
+   },
+   "startTime": "2026-10-21T15:52:29Z",
+   "containers": [
+    {
+     "name": "batch",
+     "startTime": "2026-10-21T15:52:32Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:38Z",
+      "usageNanoCores": 77254678,
+      "usageCoreNanoSeconds": 39336783700,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:38Z",
+      "availableBytes": 435224576,
+      "usageBytes": 34660352,
+      "workingSetBytes": 34537472,
+      "rssBytes": 33824768,
+      "pageFaults": 11273,
+      "majorPageFaults": 44,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:38Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 28672,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 8
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 4096,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 1
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:38Z",
+      "swapAvailableBytes": 466575360,
+      "swapUsageBytes": 3186688
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:36Z",
+    "usageNanoCores": 25440278,
+    "usageCoreNanoSeconds": 39005644600,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:36Z",
+    "availableBytes": 434864128,
+    "usageBytes": 35065856,
+    "workingSetBytes": 34897920,
+    "rssBytes": 33865728,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:36Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:37Z",
+    "name": "eth0",
+    "rxBytes": 446,
+    "rxErrors": 0,
+    "txBytes": 1006,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 446,
+      "rxErrors": 0,
+      "txBytes": 1006,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:05:08Z",
+     "availableBytes": 469749760,
+     "capacityBytes": 469762048,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-gc57l"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 36864,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 10
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:36Z",
+    "swapUsageBytes": 3186688
+   }
+  },
+  {
+   "podRef": {
+    "name": "worker-86f8b47f95-7qs8b",
+    "namespace": "shop",
+    "uid": "68838b54-9f4c-48b1-9d2a-2cbf170f7e75"
+   },
+   "startTime": "2026-10-21T14:33:42Z",
+   "containers": [
+    {
+     "name": "worker",
+     "startTime": "2026-10-21T14:33:43Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:37Z",
+      "usageNanoCores": 28883175,
+      "usageCoreNanoSeconds": 70377603800,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:37Z",
+      "availableBytes": 89300992,
+      "usageBytes": 16998400,
+      "workingSetBytes": 15556608,
+      "rssBytes": 10620928,
+      "pageFaults": 33991,
+      "majorPageFaults": 7371,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:37Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 45056,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 14
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 118784,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 1
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:37Z",
+      "swapAvailableBytes": 103284736,
+      "swapUsageBytes": 1572864
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:35Z",
+    "usageNanoCores": 28190917,
+    "usageCoreNanoSeconds": 70535716800,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:35Z",
+    "availableBytes": 89034752,
+    "usageBytes": 17264640,
+    "workingSetBytes": 15822848,
+    "rssBytes": 10661888,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:35Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:41Z",
+    "name": "eth0",
+    "rxBytes": 2893224,
+    "rxErrors": 0,
+    "txBytes": 3895486,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 2893224,
+      "rxErrors": 0,
+      "txBytes": 3895486,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:03:55Z",
+     "availableBytes": 104845312,
+     "capacityBytes": 104857600,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-c8c59"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 167936,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 16
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:35Z",
+    "swapUsageBytes": 1560576
+   }
+  },
+  {
+   "podRef": {
+    "name": "monitoring-kube-prometheus-operator-64946cb6f5-bszds",
+    "namespace": "monitoring",
+    "uid": "97a76280-1d06-498f-adfa-27ad08357d72"
+   },
+   "startTime": "2026-10-21T11:40:04Z",
+   "containers": [
+    {
+     "name": "kube-prometheus-stack",
+     "startTime": "2026-10-21T14:53:46Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:40Z",
+      "usageNanoCores": 77069321,
+      "usageCoreNanoSeconds": 132198734500,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:40Z",
+      "availableBytes": 235880448,
+      "usageBytes": 39706624,
+      "workingSetBytes": 32555008,
+      "rssBytes": 20910080,
+      "pageFaults": 56878,
+      "majorPageFaults": 17790,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:40Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 45056,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 14
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 114688,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 2
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:40Z",
+      "swapAvailableBytes": 265138176,
+      "swapUsageBytes": 3297280
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:39Z",
+    "usageNanoCores": 56895130,
+    "usageCoreNanoSeconds": 384761472500,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:39Z",
+    "availableBytes": 235462656,
+    "usageBytes": 40124416,
+    "workingSetBytes": 32972800,
+    "rssBytes": 20926464,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:39Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:41Z",
+    "name": "eth0",
+    "rxBytes": 18333116,
+    "rxErrors": 0,
+    "txBytes": 15300826,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 18333116,
+      "rxErrors": 0,
+      "txBytes": 15300826,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:05:22Z",
+     "availableBytes": 268423168,
+     "capacityBytes": 268435456,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "tls-secret"
+    },
+    {
+     "time": "2026-10-21T16:05:22Z",
+     "availableBytes": 268423168,
+     "capacityBytes": 268435456,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-nvzvd"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 163840,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 17
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:39Z",
+    "swapUsageBytes": 3305472
+   }
+  },
+  {
+   "podRef": {
+    "name": "api-668b49898-vf679",
+    "namespace": "shop",
+    "uid": "e16f97a5-f4a3-462f-aea7-86ab77c51c19"
+   },
+   "startTime": "2026-10-21T15:52:29Z",
+   "containers": [
+    {
+     "name": "api",
+     "startTime": "2026-10-21T15:52:32Z",
+     "cpu": {
+      "time": "2026-10-21T16:05:37Z",
+      "usageNanoCores": 6268877,
+      "usageCoreNanoSeconds": 6185667900,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "memory": {
+      "time": "2026-10-21T16:05:37Z",
+      "availableBytes": 95752192,
+      "usageBytes": 9777152,
+      "workingSetBytes": 9105408,
+      "rssBytes": 7811072,
+      "pageFaults": 6947,
+      "majorPageFaults": 242,
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "io": {
+      "time": "2026-10-21T16:05:37Z",
+      "psi": {
+       "full": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       },
+       "some": {
+        "total": 0,
+        "avg10": 0,
+        "avg60": 0,
+        "avg300": 0
+       }
+      }
+     },
+     "rootfs": {
+      "time": "2026-10-21T16:05:35Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 45056,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 14
+     },
+     "logs": {
+      "time": "2026-10-21T16:05:44Z",
+      "availableBytes": 974953263104,
+      "capacityBytes": 1081101176832,
+      "usedBytes": 61440,
+      "inodesFree": 66461013,
+      "inodes": 67108864,
+      "inodesUsed": 1
+     },
+     "swap": {
+      "time": "2026-10-21T16:05:37Z",
+      "swapAvailableBytes": 104574976,
+      "swapUsageBytes": 282624
+     }
+    }
+   ],
+   "cpu": {
+    "time": "2026-10-21T16:05:32Z",
+    "usageNanoCores": 8324543,
+    "usageCoreNanoSeconds": 6415299800,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "memory": {
+    "time": "2026-10-21T16:05:32Z",
+    "availableBytes": 95469568,
+    "usageBytes": 10092544,
+    "workingSetBytes": 9388032,
+    "rssBytes": 7852032,
+    "pageFaults": 0,
+    "majorPageFaults": 0,
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "io": {
+    "time": "2026-10-21T16:05:32Z",
+    "psi": {
+     "full": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     },
+     "some": {
+      "total": 0,
+      "avg10": 0,
+      "avg60": 0,
+      "avg300": 0
+     }
+    }
+   },
+   "network": {
+    "time": "2026-10-21T16:05:32Z",
+    "name": "eth0",
+    "rxBytes": 190492,
+    "rxErrors": 0,
+    "txBytes": 260146,
+    "txErrors": 0,
+    "interfaces": [
+     {
+      "name": "eth0",
+      "rxBytes": 190492,
+      "rxErrors": 0,
+      "txBytes": 260146,
+      "txErrors": 0
+     }
+    ]
+   },
+   "volume": [
+    {
+     "time": "2026-10-21T16:04:49Z",
+     "availableBytes": 104845312,
+     "capacityBytes": 104857600,
+     "usedBytes": 12288,
+     "inodesFree": 488698,
+     "inodes": 488707,
+     "inodesUsed": 9,
+     "name": "kube-api-access-r229l"
+    }
+   ],
+   "ephemeral-storage": {
+    "time": "2026-10-21T16:05:44Z",
+    "availableBytes": 974953263104,
+    "capacityBytes": 1081101176832,
+    "usedBytes": 110592,
+    "inodesFree": 66461013,
+    "inodes": 67108864,
+    "inodesUsed": 16
+   },
+   "process_stats": {
+    "process_count": 1
+   },
+   "swap": {
+    "time": "2026-10-21T16:05:32Z",
+    "swapUsageBytes": 278528
+   }
+  }
+ ]
+}

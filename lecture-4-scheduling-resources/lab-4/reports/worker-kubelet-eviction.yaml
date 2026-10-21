@@ -21,7 +21,7 @@ containerRuntimeEndpoint: unix:///run/containerd/containerd.sock
 cpuManagerReconcilePeriod: 0s
 crashLoopBackOff: {}
 evictionHard:
-  memory.available: "2900Mi"
+  memory.available: "3240Mi"
   imagefs.available: 0%
   nodefs.available: 0%
   nodefs.inodesFree: 0%

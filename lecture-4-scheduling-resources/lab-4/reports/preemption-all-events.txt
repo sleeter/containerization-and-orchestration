@@ -1,0 +1,114 @@
+LAST SEEN   TYPE      REASON              OBJECT                        MESSAGE
+11m         Warning   Unhealthy           pod/api-668b49898-zbkd6       Readiness probe failed: Get "http://10.244.0.12:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2m10s       Warning   Unhealthy           pod/worker-86f8b47f95-7qs8b   Readiness probe failed: Get "http://10.244.1.29:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+28m         Warning   Unhealthy           pod/worker-86f8b47f95-7qs8b   Liveness probe failed: Get "http://10.244.1.29:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+14m         Warning   Unhealthy           pod/worker-86f8b47f95-fsqhq   Readiness probe failed: Get "http://10.244.0.13:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+11m         Warning   Unhealthy           pod/api-668b49898-47nkq       Readiness probe failed: Get "http://10.244.1.21:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+14m         Warning   Unhealthy           pod/api-668b49898-8lxbk       Liveness probe failed: Get "http://10.244.1.20:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+18m         Warning   Unhealthy           pod/worker-86f8b47f95-fsqhq   Liveness probe failed: Get "http://10.244.0.13:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy           pod/api-668b49898-47nkq       Liveness probe failed: Get "http://10.244.1.21:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+11m         Warning   Unhealthy           pod/api-668b49898-8lxbk       Readiness probe failed: Get "http://10.244.1.20:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+10m         Warning   Unhealthy           pod/shop-db-1                 Readiness probe failed: Get "https://10.244.1.22:8000/readyz": context deadline exceeded
+14m         Warning   Unhealthy           pod/api-668b49898-zbkd6       Liveness probe failed: Get "http://10.244.0.12:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m13s       Warning   Unhealthy           pod/shop-db-1                 Readiness probe failed: Get "https://10.244.1.22:8000/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+10m         Warning   Unhealthy           pod/shop-db-1                 Readiness probe failed: Get "https://10.244.1.22:8000/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+15m         Normal    SuccessfulCreate    replicaset/batch-998b59dc6    Created pod: batch-998b59dc6-lcxbz
+15m         Normal    ScalingReplicaSet   deployment/batch              Scaled up replica set batch-998b59dc6 from 1 to 2
+15m         Normal    ScalingReplicaSet   deployment/batch              Scaled down replica set batch-998b59dc6 from 2 to 0
+15m         Normal    SuccessfulDelete    replicaset/batch-998b59dc6    Deleted pod: batch-998b59dc6-lcxbz
+15m         Warning   FailedScheduling    pod/batch-998b59dc6-lcxbz     running Bind plugin "DefaultBinder": Operation cannot be fulfilled on pods/binding "batch-998b59dc6-lcxbz": pod batch-998b59dc6-lcxbz is being deleted, cannot be assigned to a host
+15m         Normal    Killing             pod/batch-998b59dc6-ktxbw     Stopping container batch
+15m         Normal    SuccessfulDelete    replicaset/batch-998b59dc6    Deleted pod: batch-998b59dc6-ktxbw
+14m         Normal    ScalingReplicaSet   deployment/batch              Scaled up replica set batch-87bd94ccf from 0 to 2
+14m         Warning   FailedScheduling    pod/batch-87bd94ccf-q6t7w     0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/2 nodes are available: 1 No preemption victims found for incoming pod, 1 Preemption is not helpful for scheduling.
+14m         Normal    SuccessfulCreate    replicaset/batch-87bd94ccf    Created pod: batch-87bd94ccf-jvxz9
+14m         Normal    Scheduled           pod/batch-87bd94ccf-jvxz9     Successfully assigned shop/batch-87bd94ccf-jvxz9 to lab4-worker
+14m         Normal    SuccessfulCreate    replicaset/batch-87bd94ccf    Created pod: batch-87bd94ccf-q6t7w
+14m         Normal    Created             pod/batch-87bd94ccf-jvxz9     Created container: batch
+14m         Normal    Started             pod/batch-87bd94ccf-jvxz9     Started container batch
+14m         Normal    Pulled              pod/batch-87bd94ccf-jvxz9     Container image "shop/batch:0.2" already present on machine
+11m         Warning   Unhealthy           pod/shop-db-1                 Liveness probe failed: Get "https://10.244.1.22:8000/healthz": context deadline exceeded
+10m         Warning   Unhealthy           pod/shop-db-1                 Readiness probe failed: Get "https://10.244.1.22:8000/readyz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+11m         Warning   Unhealthy           pod/shop-db-1                 Liveness probe failed: Get "https://10.244.1.22:8000/healthz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+11m         Normal    Killing             pod/shop-db-1                 Container postgres failed liveness probe, will be restarted
+5m10s       Warning   FailedScheduling    pod/batch-87bd94ccf-q6t7w     0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/2 nodes are available: 1 No preemption victims found for incoming pod, 1 Preemption is not helpful for scheduling.
+9m58s       Normal    Pulled              pod/shop-db-1                 Container image "ghcr.io/cloudnative-pg/postgresql:18.6-system-trixie" already present on machine
+9m57s       Normal    Created             pod/shop-db-1                 Created container: postgres
+9m54s       Normal    Started             pod/shop-db-1                 Started container postgres
+9m55s       Warning   Unhealthy           pod/shop-db-1                 Readiness probe failed: Get "https://10.244.1.22:8000/readyz": dial tcp 10.244.1.22:8000: connect: connection refused
+9m50s       Warning   Unhealthy           pod/shop-db-1                 Startup probe failed: Get "https://10.244.1.22:8000/startupz": dial tcp 10.244.1.22:8000: connect: connection refused
+9m39s       Warning   Unhealthy           pod/shop-db-1                 Startup probe failed: HTTP probe failed with statuscode: 500
+4m41s       Normal    Scheduled           pod/api-7bc9cccfbd-7fsv7      Successfully assigned shop/api-7bc9cccfbd-7fsv7 to lab4-control-plane
+4m42s       Normal    ScalingReplicaSet   deployment/api                Scaled up replica set api-7bc9cccfbd from 0 to 1
+4m42s       Normal    SuccessfulCreate    replicaset/api-7bc9cccfbd     Created pod: api-7bc9cccfbd-7fsv7
+4m40s       Normal    Created             pod/api-7bc9cccfbd-7fsv7      Created container: api
+4m40s       Normal    Pulled              pod/api-7bc9cccfbd-7fsv7      Container image "shop/api:0.2" already present on machine
+4m39s       Normal    Started             pod/api-7bc9cccfbd-7fsv7      Started container api
+4m38s       Normal    ScalingReplicaSet   deployment/api                Scaled up replica set api-7bc9cccfbd from 1 to 2
+4m38s       Normal    Killing             pod/api-668b49898-zbkd6       Stopping container api
+4m38s       Normal    SuccessfulDelete    replicaset/api-668b49898      Deleted pod: api-668b49898-zbkd6
+4m38s       Normal    SuccessfulCreate    replicaset/api-7bc9cccfbd     Created pod: api-7bc9cccfbd-sltkx
+4m38s       Normal    ScalingReplicaSet   deployment/api                Scaled down replica set api-668b49898 from 3 to 2
+4m38s       Normal    Scheduled           pod/api-7bc9cccfbd-sltkx      Successfully assigned shop/api-7bc9cccfbd-sltkx to lab4-control-plane
+4m37s       Normal    Created             pod/api-7bc9cccfbd-sltkx      Created container: api
+4m37s       Normal    Started             pod/api-7bc9cccfbd-sltkx      Started container api
+4m37s       Normal    Pulled              pod/api-7bc9cccfbd-sltkx      Container image "shop/api:0.2" already present on machine
+4m36s       Normal    SuccessfulCreate    replicaset/api-7bc9cccfbd     Created pod: api-7bc9cccfbd-xqk72
+4m36s       Normal    ScalingReplicaSet   deployment/api                Scaled down replica set api-668b49898 from 2 to 1
+4m36s       Normal    ScalingReplicaSet   deployment/api                Scaled up replica set api-7bc9cccfbd from 2 to 3
+4m36s       Normal    SuccessfulDelete    replicaset/api-668b49898      Deleted pod: api-668b49898-8lxbk
+4m36s       Normal    Killing             pod/api-668b49898-8lxbk       Stopping container api
+4m35s       Warning   FailedScheduling    pod/api-7bc9cccfbd-xqk72      0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match pod topology spread constraints.
+4m35s       Normal    Killing             pod/batch-87bd94ccf-jvxz9     Stopping container batch
+4m35s       Normal    SuccessfulCreate    replicaset/batch-87bd94ccf    Created pod: batch-87bd94ccf-cvs88
+4m35s       Normal    Preempted           pod/batch-87bd94ccf-jvxz9     Preempted by pod 7fa0ed75-80ed-4b67-ad6b-61f78ca24b09 on node lab4-worker
+4m35s       Warning   FailedScheduling    pod/batch-87bd94ccf-cvs88     0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/2 nodes are available: 1 No preemption victims found for incoming pod, 1 Preemption is not helpful for scheduling.
+4m26s       Warning   FailedScheduling    pod/batch-87bd94ccf-cvs88     0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/2 nodes are available: 1 No preemption victims found for incoming pod, 1 Preemption is not helpful for scheduling.
+4m31s       Warning   FailedScheduling    pod/api-7bc9cccfbd-xqk72      0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match pod topology spread constraints. no new claims to deallocate, preemption: not eligible due to a terminating pod on the nominated node.
+4m29s       Warning   Unhealthy           pod/api-668b49898-8lxbk       Readiness probe failed: Get "http://10.244.1.20:8080/health": dial tcp 10.244.1.20:8080: connect: connection refused
+4m26s       Warning   FailedScheduling    pod/api-7bc9cccfbd-xqk72      0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match pod topology spread constraints. no new claims to deallocate, preemption: not eligible due to a terminating pod on the nominated node.
+4m4s        Normal    Scheduled           pod/api-7bc9cccfbd-xqk72      Successfully assigned shop/api-7bc9cccfbd-xqk72 to lab4-worker
+4m3s        Normal    Started             pod/api-7bc9cccfbd-xqk72      Started container api
+4m3s        Normal    Created             pod/api-7bc9cccfbd-xqk72      Created container: api
+4m3s        Normal    Pulled              pod/api-7bc9cccfbd-xqk72      Container image "shop/api:0.2" already present on machine
+4m2s        Normal    ScalingReplicaSet   deployment/api                Scaled down replica set api-668b49898 from 1 to 0
+4m2s        Normal    SuccessfulDelete    replicaset/api-668b49898      Deleted pod: api-668b49898-47nkq
+4m2s        Normal    Killing             pod/api-668b49898-47nkq       Stopping container api
+91s         Normal    ScalingReplicaSet   deployment/api                Scaled up replica set api-668b49898 from 0 to 1
+90s         Normal    SuccessfulCreate    replicaset/api-668b49898      Created pod: api-668b49898-vf679
+91s         Normal    ScalingReplicaSet   deployment/batch              Scaled down replica set batch-87bd94ccf from 2 to 1
+90s         Normal    SuccessfulDelete    replicaset/batch-87bd94ccf    Deleted pod: batch-87bd94ccf-cvs88
+90s         Normal    SuccessfulDelete    replicaset/batch-87bd94ccf    Deleted pod: batch-87bd94ccf-q6t7w
+90s         Normal    ScalingReplicaSet   deployment/batch              Scaled down replica set batch-87bd94ccf from 1 to 0
+90s         Normal    ScalingReplicaSet   deployment/batch              Scaled up replica set batch-998b59dc6 from 0 to 1
+90s         Normal    Scheduled           pod/api-668b49898-vf679       Successfully assigned shop/api-668b49898-vf679 to lab4-worker
+89s         Normal    SuccessfulCreate    replicaset/batch-998b59dc6    Created pod: batch-998b59dc6-mwk64
+89s         Normal    Scheduled           pod/batch-998b59dc6-mwk64     Successfully assigned shop/batch-998b59dc6-mwk64 to lab4-worker
+86s         Normal    Created             pod/batch-998b59dc6-mwk64     Created container: batch
+86s         Normal    Started             pod/batch-998b59dc6-mwk64     Started container batch
+86s         Normal    Pulled              pod/batch-998b59dc6-mwk64     Container image "shop/batch:0.2" already present on machine
+86s         Normal    Started             pod/api-668b49898-vf679       Started container api
+86s         Normal    Pulled              pod/api-668b49898-vf679       Container image "shop/api:0.2" already present on machine
+86s         Normal    Created             pod/api-668b49898-vf679       Created container: api
+85s         Normal    ScalingReplicaSet   deployment/api                Scaled down replica set api-7bc9cccfbd from 3 to 2
+85s         Normal    SuccessfulDelete    replicaset/api-7bc9cccfbd     Deleted pod: api-7bc9cccfbd-xqk72
+85s         Normal    Killing             pod/api-7bc9cccfbd-xqk72      Stopping container api
+84s         Normal    Scheduled           pod/api-668b49898-5rp5n       Successfully assigned shop/api-668b49898-5rp5n to lab4-worker
+85s         Normal    ScalingReplicaSet   deployment/api                Scaled up replica set api-668b49898 from 1 to 2
+85s         Normal    SuccessfulCreate    replicaset/api-668b49898      Created pod: api-668b49898-5rp5n
+84s         Normal    Pulled              pod/api-668b49898-5rp5n       Container image "shop/api:0.2" already present on machine
+83s         Normal    Created             pod/api-668b49898-5rp5n       Created container: api
+82s         Normal    Started             pod/api-668b49898-5rp5n       Started container api
+82s         Warning   Unhealthy           pod/api-668b49898-5rp5n       Readiness probe failed: Get "http://10.244.1.38:8080/health": dial tcp 10.244.1.38:8080: connect: connection refused
+76s         Normal    ScalingReplicaSet   deployment/api                (combined from similar events): Scaled down replica set api-7bc9cccfbd from 1 to 0
+79s         Normal    Killing             pod/api-7bc9cccfbd-7fsv7      Stopping container api
+79s         Normal    SuccessfulCreate    replicaset/api-668b49898      Created pod: api-668b49898-c85mv
+78s         Normal    Scheduled           pod/api-668b49898-c85mv       Successfully assigned shop/api-668b49898-c85mv to lab4-control-plane
+79s         Normal    SuccessfulDelete    replicaset/api-7bc9cccfbd     Deleted pod: api-7bc9cccfbd-7fsv7
+78s         Normal    Pulled              pod/api-668b49898-c85mv       Container image "shop/api:0.2" already present on machine
+77s         Normal    Started             pod/api-668b49898-c85mv       Started container api
+77s         Normal    Created             pod/api-668b49898-c85mv       Created container: api
+75s         Normal    Killing             pod/api-7bc9cccfbd-sltkx      Stopping container api
+75s         Normal    SuccessfulDelete    replicaset/api-7bc9cccfbd     Deleted pod: api-7bc9cccfbd-sltkx
+72s         Warning   Unhealthy           pod/api-7bc9cccfbd-7fsv7      Readiness probe failed: Get "http://10.244.0.15:8080/health": dial tcp 10.244.0.15:8080: connect: connection refused
+70s         Warning   Unhealthy           pod/api-7bc9cccfbd-sltkx      Readiness probe failed: Get "http://10.244.0.16:8080/health": dial tcp 10.244.0.16:8080: connect: connection refused

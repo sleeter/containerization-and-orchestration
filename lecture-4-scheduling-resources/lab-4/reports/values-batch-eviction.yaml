@@ -1,0 +1,54 @@
+team: shop
+
+db:
+  name: shop-db
+  instances: 1
+  storage: 1Gi
+  resources:
+    requests: {cpu: 500m, memory: 117Mi}
+    limits: {cpu: 500m, memory: 117Mi}
+
+api:
+  image: shop/api:0.2
+  replicas: 3
+  healthFail: false
+  resources:
+    requests: {cpu: 200m, memory: 100Mi}
+    limits: {cpu: 200m, memory: 100Mi}
+
+worker:
+  image: shop/worker:0.1
+  replicas: 2
+  resources:
+    requests: {cpu: 18m, memory: 100Mi}
+    limits: {cpu: 200m, memory: 100Mi}
+
+batch:
+  image: shop/batch:0.2
+  memoryMiB: 160
+  replicas: 1
+  cpuPercent: 1
+  nodeSelector:
+    kubernetes.io/hostname: lab4-worker
+  resources:
+    requests:
+      cpu: 50m
+      memory: 48Mi
+    limits:
+      cpu: 300m
+      memory: 448Mi
+
+scheduling:
+  mode: topologySpreadConstraints
+
+priority:
+  critical:
+    name: shop-critical
+    value: 100000
+  batch:
+    name: shop-batch-low
+    value: -1000
+
+pdb:
+  api:
+    minAvailable: 2

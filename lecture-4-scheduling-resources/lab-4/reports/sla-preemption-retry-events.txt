@@ -1,0 +1,2 @@
+44m         Normal    Preempted           pod/batch-87bd94ccf-jvxz9     Preempted by pod 7fa0ed75-80ed-4b67-ad6b-61f78ca24b09 on node lab4-worker
+4m5s        Normal    Preempted           pod/batch-576f5c7568-gnblr    Preempted by pod ee1e87e2-749f-43da-9c1c-59dae753d3c7 on node lab4-worker

@@ -1,0 +1,363 @@
+LAST SEEN   TYPE      REASON              OBJECT                                MESSAGE
+21h         Normal    NoPods              poddisruptionbudget/shop-db-primary   No matching pods found
+16h         Warning   Unhealthy           pod/worker-86f8b47f95-vdtcg           Readiness probe failed: Get "http://10.244.0.10:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17h         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Readiness probe failed: Get "http://10.244.1.17:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+22h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.21:8000/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+22h         Warning   Unhealthy           pod/api-7df9b9dd6d-gd4x7              Readiness probe failed: Get "http://10.244.0.13:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+21h         Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-7688798fd4 from 0 to 1
+21h         Normal    SuccessfulCreate    replicaset/batch-7688798fd4           Created pod: batch-7688798fd4-f4xbj
+21h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6858454fd from 0 to 1
+21h         Normal    SuccessfulCreate    replicaset/api-6858454fd              Created pod: api-6858454fd-5g87s
+21h         Normal    Scheduled           pod/batch-7688798fd4-f4xbj            Successfully assigned shop/batch-7688798fd4-f4xbj to lab4-worker
+21h         Normal    Scheduled           pod/api-6858454fd-5g87s               Successfully assigned shop/api-6858454fd-5g87s to lab4-worker
+21h         Normal    Created             pod/batch-7688798fd4-f4xbj            Created container: batch
+21h         Normal    Pulled              pod/batch-7688798fd4-f4xbj            Container image "shop/batch:0.1" already present on machine
+21h         Normal    Created             pod/api-6858454fd-5g87s               Created container: api
+21h         Normal    Pulled              pod/api-6858454fd-5g87s               Container image "shop/api:0.2" already present on machine
+21h         Normal    Started             pod/api-6858454fd-5g87s               Started container api
+21h         Normal    Started             pod/batch-7688798fd4-f4xbj            Started container batch
+16h         Warning   Unhealthy           pod/api-6858454fd-5g87s               Readiness probe failed: Get "http://10.244.1.23:8080/health": dial tcp 10.244.1.23:8080: connect: connection refused
+21h         Normal    ScalingReplicaSet   deployment/batch                      Scaled down replica set batch-58f88f5 from 1 to 0
+21h         Normal    SuccessfulDelete    replicaset/batch-58f88f5              Deleted pod: batch-58f88f5-9snrn
+21h         Normal    Killing             pod/batch-58f88f5-9snrn               Stopping container batch
+21h         Normal    SuccessfulDelete    replicaset/api-7df9b9dd6d             Deleted pod: api-7df9b9dd6d-gd4x7
+21h         Normal    ScalingReplicaSet   deployment/api                        Scaled down replica set api-7df9b9dd6d from 3 to 2
+21h         Normal    SuccessfulCreate    replicaset/api-6858454fd              Created pod: api-6858454fd-f94kf
+21h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6858454fd from 1 to 2
+21h         Normal    Killing             pod/api-7df9b9dd6d-gd4x7              Stopping container api
+21h         Normal    Scheduled           pod/api-6858454fd-f94kf               Successfully assigned shop/api-6858454fd-f94kf to lab4-control-plane
+17h         Normal    Pulled              pod/api-6858454fd-f94kf               Container image "shop/api:0.2" already present on machine
+17h         Normal    Created             pod/api-6858454fd-f94kf               Created container: api
+17h         Normal    Started             pod/api-6858454fd-f94kf               Started container api
+16h         Warning   Unhealthy           pod/api-6858454fd-f94kf               Readiness probe failed: Get "http://10.244.0.14:8080/health": dial tcp 10.244.0.14:8080: connect: connection refused
+21h         Warning   Unhealthy           pod/api-7df9b9dd6d-gd4x7              Readiness probe failed: Get "http://10.244.0.13:8080/health": dial tcp 10.244.0.13:8080: connect: connection refused
+21h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6858454fd from 2 to 3
+21h         Normal    ScalingReplicaSet   deployment/api                        Scaled down replica set api-7df9b9dd6d from 2 to 1
+21h         Normal    Killing             pod/api-7df9b9dd6d-4kqvb              Stopping container api
+21h         Normal    SuccessfulCreate    replicaset/api-6858454fd              Created pod: api-6858454fd-7mmx5
+21h         Normal    SuccessfulDelete    replicaset/api-7df9b9dd6d             Deleted pod: api-7df9b9dd6d-4kqvb
+21h         Normal    Scheduled           pod/api-6858454fd-7mmx5               Successfully assigned shop/api-6858454fd-7mmx5 to lab4-control-plane
+17h         Normal    Pulled              pod/api-6858454fd-7mmx5               Container image "shop/api:0.2" already present on machine
+17h         Normal    Created             pod/api-6858454fd-7mmx5               Created container: api
+17h         Normal    Started             pod/api-6858454fd-7mmx5               Started container api
+21h         Normal    Killing             pod/api-7df9b9dd6d-6p5lx              Stopping container api
+21h         Normal    ScalingReplicaSet   deployment/api                        Scaled down replica set api-7df9b9dd6d from 1 to 0
+21h         Normal    SuccessfulDelete    replicaset/api-7df9b9dd6d             Deleted pod: api-7df9b9dd6d-6p5lx
+21h         Normal    Killing             pod/shop-db-1                         Stopping container postgres
+21h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: HTTP probe failed with statuscode: 500
+17h         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Liveness probe failed: Get "http://10.244.1.17:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/api-6858454fd-5g87s               Readiness probe failed: Get "http://10.244.1.23:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17h         Warning   Unhealthy           pod/api-6858454fd-5g87s               Liveness probe failed: Get "http://10.244.1.23:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+21h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.21:8000/readyz": dial tcp 10.244.1.21:8000: connect: connection refused
+21h         Normal    Scheduled           pod/shop-db-1                         Successfully assigned shop/shop-db-1 to lab4-worker
+21h         Normal    Pulled              pod/shop-db-1                         Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1" already present on machine
+21h         Normal    Created             pod/shop-db-1                         Created container: bootstrap-controller
+21h         Normal    Started             pod/shop-db-1                         Started container bootstrap-controller
+21h         Normal    Pulled              pod/shop-db-1                         Container image "ghcr.io/cloudnative-pg/postgresql:18.6-system-trixie" already present on machine
+21h         Normal    Created             pod/shop-db-1                         Created container: postgres
+21h         Normal    Started             pod/shop-db-1                         Started container postgres
+17h         Warning   Unhealthy           pod/api-6858454fd-7mmx5               Readiness probe failed: Get "http://10.244.0.15:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17h         Warning   Unhealthy           pod/api-6858454fd-7mmx5               Liveness probe failed: Get "http://10.244.0.15:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+19h         Warning   Unhealthy           pod/shop-db-1                         Liveness probe failed: Get "https://10.244.1.24:8000/healthz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/api-6858454fd-f94kf               Readiness probe failed: Get "http://10.244.0.14:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17h         Warning   Unhealthy           pod/api-6858454fd-f94kf               Liveness probe failed: Get "http://10.244.0.14:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+19h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.24:8000/readyz": write tcp 10.244.1.1:55344->10.244.1.24:8000: write: broken pipe
+16h         Warning   Unhealthy           pod/worker-86f8b47f95-vdtcg           Liveness probe failed: Get "http://10.244.0.10:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17h         Warning   Unhealthy           pod/shop-db-1                         Liveness probe failed: Get "https://10.244.1.24:8000/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.24:8000/readyz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+17h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.24:8000/readyz": context deadline exceeded
+17h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.24:8000/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+17h         Normal    Killing             pod/api-6858454fd-7mmx5               Container api failed liveness probe, will be restarted
+17h         Normal    Killing             pod/api-6858454fd-f94kf               Container api failed liveness probe, will be restarted
+17h         Warning   Unhealthy           pod/api-6858454fd-7mmx5               Readiness probe failed: Get "http://10.244.0.15:8080/health": dial tcp 10.244.0.15:8080: connect: connection refused
+17h         Normal    SuccessfulCreate    replicaset/batch-7688798fd4           Created pod: batch-7688798fd4-255mr
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-7688798fd4 from 1 to 5
+17h         Normal    SuccessfulCreate    replicaset/batch-7566488d6b           Created pod: batch-7566488d6b-ns4pp
+17h         Normal    Scheduled           pod/batch-7688798fd4-9p5xm            Successfully assigned shop/batch-7688798fd4-9p5xm to lab4-worker
+17h         Normal    SuccessfulCreate    replicaset/batch-7688798fd4           Created pod: batch-7688798fd4-zmm96
+17h         Normal    SuccessfulCreate    replicaset/batch-7688798fd4           Created pod: batch-7688798fd4-9p5xm
+17h         Normal    SuccessfulCreate    replicaset/batch-7688798fd4           Created pod: batch-7688798fd4-4l9dx
+17h         Normal    Scheduled           pod/batch-7566488d6b-ns4pp            Successfully assigned shop/batch-7566488d6b-ns4pp to lab4-worker
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled down replica set batch-7688798fd4 from 5 to 4
+17h         Normal    Scheduled           pod/batch-7688798fd4-zmm96            Successfully assigned shop/batch-7688798fd4-zmm96 to lab4-control-plane
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-7566488d6b from 0 to 2
+17h         Normal    Scheduled           pod/batch-7688798fd4-4l9dx            Successfully assigned shop/batch-7688798fd4-4l9dx to lab4-control-plane
+17h         Normal    Scheduled           pod/batch-7566488d6b-htm5f            Successfully assigned shop/batch-7566488d6b-htm5f to lab4-control-plane
+17h         Normal    Scheduled           pod/batch-7688798fd4-255mr            Successfully assigned shop/batch-7688798fd4-255mr to lab4-control-plane
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-7566488d6b from 2 to 3
+17h         Normal    SuccessfulCreate    replicaset/batch-7566488d6b           Created pod: batch-7566488d6b-htm5f
+17h         Normal    Scheduled           pod/batch-7566488d6b-xv4xq            Successfully assigned shop/batch-7566488d6b-xv4xq to lab4-worker
+17h         Normal    SuccessfulCreate    replicaset/batch-7566488d6b           Created pod: batch-7566488d6b-xv4xq
+17h         Normal    SuccessfulDelete    replicaset/batch-7688798fd4           Deleted pod: batch-7688798fd4-zmm96
+17h         Normal    Pulled              pod/batch-7566488d6b-xv4xq            Container image "shop/batch:0.1" already present on machine
+17h         Normal    Pulled              pod/batch-7566488d6b-htm5f            Container image "shop/batch:0.1" already present on machine
+17h         Normal    Pulled              pod/batch-7688798fd4-4l9dx            Container image "shop/batch:0.1" already present on machine
+17h         Normal    Pulled              pod/batch-7688798fd4-255mr            Container image "shop/batch:0.1" already present on machine
+17h         Normal    Created             pod/batch-7566488d6b-xv4xq            Created container: batch
+17h         Normal    Created             pod/batch-7566488d6b-ns4pp            Created container: batch
+17h         Normal    Pulled              pod/batch-7566488d6b-ns4pp            Container image "shop/batch:0.1" already present on machine
+17h         Normal    Created             pod/batch-7688798fd4-9p5xm            Created container: batch
+17h         Normal    Pulled              pod/batch-7688798fd4-9p5xm            Container image "shop/batch:0.1" already present on machine
+17h         Normal    Started             pod/batch-7688798fd4-4l9dx            Started container batch
+17h         Normal    Created             pod/batch-7688798fd4-4l9dx            Created container: batch
+17h         Normal    Started             pod/batch-7566488d6b-htm5f            Started container batch
+17h         Normal    Created             pod/batch-7566488d6b-htm5f            Created container: batch
+17h         Normal    Started             pod/batch-7566488d6b-ns4pp            Started container batch
+17h         Normal    Started             pod/batch-7688798fd4-9p5xm            Started container batch
+17h         Normal    Started             pod/batch-7566488d6b-xv4xq            Started container batch
+17h         Normal    Created             pod/batch-7688798fd4-255mr            Created container: batch
+17h         Normal    Started             pod/batch-7688798fd4-255mr            Started container batch
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled down replica set batch-7688798fd4 from 4 to 3
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-7566488d6b from 3 to 4
+17h         Normal    Killing             pod/batch-7688798fd4-9p5xm            Stopping container batch
+17h         Normal    Scheduled           pod/batch-7566488d6b-jhbnj            Successfully assigned shop/batch-7566488d6b-jhbnj to lab4-control-plane
+17h         Normal    SuccessfulDelete    replicaset/batch-7688798fd4           Deleted pod: batch-7688798fd4-9p5xm
+17h         Normal    SuccessfulCreate    replicaset/batch-7566488d6b           Created pod: batch-7566488d6b-jhbnj
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled down replica set batch-7688798fd4 from 3 to 1
+17h         Normal    Killing             pod/batch-7688798fd4-255mr            Stopping container batch
+17h         Normal    Killing             pod/batch-7688798fd4-4l9dx            Stopping container batch
+17h         Normal    SuccessfulDelete    replicaset/batch-7688798fd4           Deleted pod: batch-7688798fd4-255mr
+17h         Normal    SuccessfulDelete    replicaset/batch-7688798fd4           Deleted pod: batch-7688798fd4-4l9dx
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-7566488d6b from 4 to 5
+17h         Normal    SuccessfulCreate    replicaset/batch-7566488d6b           Created pod: batch-7566488d6b-g58fb
+17h         Warning   FailedScheduling    pod/batch-7566488d6b-g58fb            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+17h         Normal    Pulled              pod/batch-7566488d6b-jhbnj            Container image "shop/batch:0.1" already present on machine
+17h         Normal    Created             pod/batch-7566488d6b-jhbnj            Created container: batch
+17h         Normal    Started             pod/batch-7566488d6b-jhbnj            Started container batch
+17h         Normal    SuccessfulDelete    replicaset/batch-7688798fd4           Deleted pod: batch-7688798fd4-f4xbj
+17h         Normal    Killing             pod/batch-7688798fd4-f4xbj            Stopping container batch
+17h         Normal    ScalingReplicaSet   deployment/batch                      Scaled down replica set batch-7688798fd4 from 1 to 0
+16h         Warning   FailedScheduling    pod/batch-7566488d6b-g58fb            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6848954486 from 0 to 1
+16h         Normal    SuccessfulCreate    replicaset/api-6848954486             Created pod: api-6848954486-lxnss
+16h         Warning   FailedScheduling    pod/api-6848954486-lxnss              0/2 nodes are available: 2 Insufficient cpu.
+16h         Warning   FailedScheduling    pod/batch-7566488d6b-zbs4z            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+16h         Normal    Preempted           pod/batch-7566488d6b-xv4xq            Preempted by pod 7086c43d-6d5f-41f4-a80c-8295199944a4 on node lab4-worker
+16h         Normal    Killing             pod/batch-7566488d6b-xv4xq            Stopping container batch
+16h         Normal    SuccessfulCreate    replicaset/batch-7566488d6b           Created pod: batch-7566488d6b-zbs4z
+16h         Normal    Scheduled           pod/api-6848954486-lxnss              Successfully assigned shop/api-6848954486-lxnss to lab4-worker
+16h         Warning   FailedScheduling    pod/batch-7566488d6b-zbs4z            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+16h         Normal    Pulled              pod/api-6848954486-lxnss              Container image "shop/api:0.2" already present on machine
+16h         Normal    Created             pod/api-6848954486-lxnss              Created container: api
+16h         Normal    Started             pod/api-6848954486-lxnss              Started container api
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled down replica set api-6858454fd from 3 to 2
+16h         Warning   FailedScheduling    pod/api-6848954486-n7b7f              0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match pod topology spread constraints.
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6848954486 from 1 to 2
+16h         Normal    Killing             pod/batch-7566488d6b-jhbnj            Stopping container batch
+16h         Normal    SuccessfulCreate    replicaset/batch-7566488d6b           Created pod: batch-7566488d6b-4v8fs
+16h         Normal    Killing             pod/api-6858454fd-7mmx5               Stopping container api
+16h         Normal    Preempted           pod/batch-7566488d6b-jhbnj            Preempted by pod fccd5888-d45d-4824-9b32-8b683b0b6c53 on node lab4-control-plane
+16h         Normal    SuccessfulDelete    replicaset/api-6858454fd              Deleted pod: api-6858454fd-7mmx5
+16h         Normal    SuccessfulCreate    replicaset/api-6848954486             Created pod: api-6848954486-n7b7f
+16h         Warning   FailedScheduling    pod/batch-7566488d6b-4v8fs            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+16h         Warning   FailedScheduling    pod/api-6848954486-n7b7f              0/2 nodes are available: 1 Insufficient cpu, 1 node(s) didn't match pod topology spread constraints. no new claims to deallocate, preemption: not eligible due to a terminating pod on the nominated node.
+16h         Warning   FailedScheduling    pod/batch-7566488d6b-4v8fs            0/2 nodes are available: 2 Insufficient cpu. no new claims to deallocate, preemption: 0/2 nodes are available: 2 Insufficient cpu.
+16h         Normal    Scheduled           pod/api-6848954486-n7b7f              Successfully assigned shop/api-6848954486-n7b7f to lab4-control-plane
+16h         Normal    Started             pod/api-6848954486-n7b7f              Started container api
+16h         Normal    Created             pod/api-6848954486-n7b7f              Created container: api
+16h         Normal    Pulled              pod/api-6848954486-n7b7f              Container image "shop/api:0.2" already present on machine
+16h         Normal    Killing             pod/api-6858454fd-f94kf               Stopping container api
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled down replica set api-6858454fd from 2 to 1
+16h         Normal    SuccessfulCreate    replicaset/api-6848954486             Created pod: api-6848954486-82wrr
+16h         Normal    SuccessfulDelete    replicaset/api-6858454fd              Deleted pod: api-6858454fd-f94kf
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6848954486 from 2 to 3
+16h         Normal    Scheduled           pod/api-6848954486-82wrr              Successfully assigned shop/api-6848954486-82wrr to lab4-control-plane
+16h         Normal    Pulled              pod/api-6848954486-82wrr              Container image "shop/api:0.2" already present on machine
+16h         Normal    Created             pod/api-6848954486-82wrr              Created container: api
+16h         Normal    Started             pod/api-6848954486-82wrr              Started container api
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled down replica set api-6858454fd from 1 to 0
+16h         Normal    Killing             pod/api-6858454fd-5g87s               Stopping container api
+16h         Normal    SuccessfulDelete    replicaset/api-6858454fd              Deleted pod: api-6858454fd-5g87s
+16h         Normal    Killing             pod/batch-7566488d6b-ns4pp            Stopping container batch
+16h         Normal    SuccessfulDelete    replicaset/batch-7566488d6b           Deleted pod: batch-7566488d6b-4v8fs
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6858454fd from 0 to 1
+16h         Normal    SuccessfulDelete    replicaset/batch-7566488d6b           Deleted pod: batch-7566488d6b-ns4pp
+16h         Normal    ScalingReplicaSet   deployment/batch                      (combined from similar events): Scaled down replica set batch-7566488d6b from 1 to 0
+16h         Normal    SuccessfulDelete    replicaset/batch-7566488d6b           Deleted pod: batch-7566488d6b-zbs4z
+16h         Normal    SuccessfulDelete    replicaset/batch-7566488d6b           Deleted pod: batch-7566488d6b-g58fb
+16h         Normal    SuccessfulCreate    replicaset/api-6858454fd              Created pod: api-6858454fd-rjtk6
+16h         Normal    Scheduled           pod/api-6858454fd-rjtk6               Successfully assigned shop/api-6858454fd-rjtk6 to lab4-worker
+16h         Normal    SuccessfulCreate    replicaset/batch-7c4f8bf584           Created pod: batch-7c4f8bf584-tnlhh
+16h         Normal    Scheduled           pod/batch-7c4f8bf584-tnlhh            Successfully assigned shop/batch-7c4f8bf584-tnlhh to lab4-worker
+16h         Normal    Pulled              pod/api-6858454fd-rjtk6               Container image "shop/api:0.2" already present on machine
+16h         Normal    Pulled              pod/batch-7c4f8bf584-tnlhh            Container image "shop/batch:0.1" already present on machine
+16h         Normal    Created             pod/batch-7c4f8bf584-tnlhh            Created container: batch
+16h         Normal    Created             pod/api-6858454fd-rjtk6               Created container: api
+16h         Normal    Started             pod/batch-7c4f8bf584-tnlhh            Started container batch
+16h         Normal    Started             pod/api-6858454fd-rjtk6               Started container api
+16h         Normal    SuccessfulDelete    replicaset/batch-7566488d6b           Deleted pod: batch-7566488d6b-htm5f
+16h         Normal    Killing             pod/batch-7566488d6b-htm5f            Stopping container batch
+16h         Normal    Killing             pod/api-6848954486-lxnss              Stopping container api
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled down replica set api-6848954486 from 3 to 2
+16h         Normal    ScalingReplicaSet   deployment/api                        Scaled up replica set api-6858454fd from 1 to 2
+16h         Normal    SuccessfulDelete    replicaset/api-6848954486             Deleted pod: api-6848954486-lxnss
+16h         Normal    SuccessfulCreate    replicaset/api-6858454fd              Created pod: api-6858454fd-8mhjj
+16h         Normal    Scheduled           pod/api-6858454fd-8mhjj               Successfully assigned shop/api-6858454fd-8mhjj to lab4-worker
+16h         Normal    Pulled              pod/api-6858454fd-8mhjj               Container image "shop/api:0.2" already present on machine
+16h         Normal    Created             pod/api-6858454fd-8mhjj               Created container: api
+16h         Normal    Started             pod/api-6858454fd-8mhjj               Started container api
+16h         Normal    Killing             pod/api-6848954486-82wrr              Stopping container api
+16h         Normal    ScalingReplicaSet   deployment/api                        (combined from similar events): Scaled down replica set api-6848954486 from 1 to 0
+16h         Normal    SuccessfulDelete    replicaset/api-6848954486             Deleted pod: api-6848954486-82wrr
+16h         Normal    Scheduled           pod/api-6858454fd-jlkbk               Successfully assigned shop/api-6858454fd-jlkbk to lab4-control-plane
+16h         Normal    SuccessfulCreate    replicaset/api-6858454fd              Created pod: api-6858454fd-jlkbk
+16h         Warning   Unhealthy           pod/api-6848954486-lxnss              Readiness probe failed: Get "http://10.244.1.29:8080/health": dial tcp 10.244.1.29:8080: connect: connection refused
+16h         Warning   Unhealthy           pod/api-6848954486-82wrr              Readiness probe failed: Get "http://10.244.0.21:8080/health": dial tcp 10.244.0.21:8080: connect: connection refused
+16h         Normal    Pulled              pod/api-6858454fd-jlkbk               Container image "shop/api:0.2" already present on machine
+16h         Normal    Created             pod/api-6858454fd-jlkbk               Created container: api
+16h         Normal    Started             pod/api-6858454fd-jlkbk               Started container api
+16h         Normal    Killing             pod/api-6848954486-n7b7f              Stopping container api
+16h         Normal    SuccessfulDelete    replicaset/api-6848954486             Deleted pod: api-6848954486-n7b7f
+16h         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Readiness probe failed: Get "http://10.244.1.31:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Readiness probe failed: Get "http://10.244.1.31:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/api-6858454fd-8mhjj               Readiness probe failed: Get "http://10.244.1.32:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Liveness probe failed: Get "http://10.244.1.17:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.24:8000/readyz": write tcp 10.244.1.1:47888->10.244.1.24:8000: write: broken pipe
+16h         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Readiness probe failed: Get "http://10.244.1.17:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Normal    Killing             pod/batch-7c4f8bf584-tnlhh            Stopping container batch
+16h         Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-6b44bb4568 from 0 to 1
+16h         Normal    SuccessfulCreate    replicaset/batch-6b44bb4568           Created pod: batch-6b44bb4568-rjwq6
+16h         Normal    Scheduled           pod/batch-6b44bb4568-rjwq6            Successfully assigned shop/batch-6b44bb4568-rjwq6 to lab4-worker
+16h         Normal    Pulled              pod/batch-6b44bb4568-rjwq6            Container image "shop/batch:0.1" already present on machine
+16h         Normal    Created             pod/batch-6b44bb4568-rjwq6            Created container: batch
+16h         Normal    Started             pod/batch-6b44bb4568-rjwq6            Started container batch
+16h         Warning   Unhealthy           pod/api-6858454fd-jlkbk               Readiness probe failed: Get "http://10.244.0.22:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/api-6858454fd-8mhjj               Liveness probe failed: Get "http://10.244.1.32:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16h         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Liveness probe failed: Get "http://10.244.1.31:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+15h         Normal    SandboxChanged      pod/worker-86f8b47f95-mw8kf           Pod sandbox changed, it will be killed and re-created.
+15h         Normal    SandboxChanged      pod/api-6858454fd-8mhjj               Pod sandbox changed, it will be killed and re-created.
+15h         Normal    SandboxChanged      pod/shop-db-1                         Pod sandbox changed, it will be killed and re-created.
+15h         Normal    SandboxChanged      pod/batch-6b44bb4568-rjwq6            Pod sandbox changed, it will be killed and re-created.
+15h         Normal    SandboxChanged      pod/api-6858454fd-rjtk6               Pod sandbox changed, it will be killed and re-created.
+15h         Normal    Created             pod/api-6858454fd-8mhjj               Created container: api
+15h         Normal    Pulled              pod/api-6858454fd-8mhjj               Container image "shop/api:0.2" already present on machine
+15h         Normal    Pulled              pod/shop-db-1                         Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1" already present on machine
+15h         Normal    Created             pod/shop-db-1                         Created container: bootstrap-controller
+41m         Normal    Pulled              pod/api-6858454fd-rjtk6               Container image "shop/api:0.2" already present on machine
+15h         Normal    Pulled              pod/batch-6b44bb4568-rjwq6            Container image "shop/batch:0.1" already present on machine
+15h         Normal    Started             pod/api-6858454fd-8mhjj               Started container api
+15h         Normal    SandboxChanged      pod/worker-86f8b47f95-vdtcg           Pod sandbox changed, it will be killed and re-created.
+15h         Normal    Pulled              pod/worker-86f8b47f95-mw8kf           Container image "shop/worker:0.1" already present on machine
+15h         Normal    Started             pod/shop-db-1                         Started container bootstrap-controller
+15h         Normal    Created             pod/batch-6b44bb4568-rjwq6            Created container: batch
+15h         Normal    Created             pod/worker-86f8b47f95-mw8kf           Created container: worker
+41m         Normal    Created             pod/api-6858454fd-rjtk6               Created container: api
+15h         Normal    SandboxChanged      pod/api-6858454fd-jlkbk               Pod sandbox changed, it will be killed and re-created.
+15h         Normal    Pulled              pod/worker-86f8b47f95-vdtcg           Container image "shop/worker:0.1" already present on machine
+15h         Normal    Started             pod/batch-6b44bb4568-rjwq6            Started container batch
+41m         Normal    Started             pod/api-6858454fd-rjtk6               Started container api
+15h         Normal    Started             pod/worker-86f8b47f95-mw8kf           Started container worker
+15h         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Readiness probe failed: Get "http://10.244.1.7:8080/health": dial tcp 10.244.1.7:8080: connect: connection refused
+15h         Normal    Pulled              pod/api-6858454fd-jlkbk               Container image "shop/api:0.2" already present on machine
+15h         Normal    Created             pod/api-6858454fd-jlkbk               Created container: api
+15h         Normal    Created             pod/worker-86f8b47f95-vdtcg           Created container: worker
+15h         Normal    Started             pod/api-6858454fd-jlkbk               Started container api
+15h         Warning   Unhealthy           pod/api-6858454fd-jlkbk               Readiness probe failed: Get "http://10.244.0.6:8080/health": dial tcp 10.244.0.6:8080: connect: connection refused
+15h         Normal    Started             pod/worker-86f8b47f95-vdtcg           Started container worker
+15h         Warning   Unhealthy           pod/worker-86f8b47f95-vdtcg           Readiness probe failed: Get "http://10.244.0.3:8080/health": dial tcp 10.244.0.3:8080: connect: connection refused
+15h         Normal    Pulled              pod/shop-db-1                         Container image "ghcr.io/cloudnative-pg/postgresql:18.6-system-trixie" already present on machine
+15h         Normal    Created             pod/shop-db-1                         Created container: postgres
+15h         Normal    Started             pod/shop-db-1                         Started container postgres
+42m         Warning   Unhealthy           pod/api-6858454fd-jlkbk               Readiness probe failed: Get "http://10.244.0.6:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+15h         Warning   Unhealthy           pod/shop-db-1                         Startup probe failed: Get "https://10.244.1.8:8000/startupz": dial tcp 10.244.1.8:8000: connect: connection refused
+15h         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Liveness probe failed: Get "http://10.244.1.7:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+41m         Warning   Unhealthy           pod/worker-86f8b47f95-vdtcg           Readiness probe failed: Get "http://10.244.0.3:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+41m         Warning   Unhealthy           pod/api-6858454fd-jlkbk               Liveness probe failed: Get "http://10.244.0.6:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+40m         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Readiness probe failed: Get "http://10.244.1.9:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+42m         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Readiness probe failed: Get "http://10.244.1.7:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+41m         Warning   Unhealthy           pod/api-6858454fd-8mhjj               Readiness probe failed: Get "http://10.244.1.2:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+15h         Warning   Unhealthy           pod/shop-db-1                         Startup probe failed: Get "https://10.244.1.8:8000/startupz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+40m         Warning   Unhealthy           pod/api-6858454fd-8mhjj               Liveness probe failed: Get "http://10.244.1.2:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+41m         Warning   Unhealthy           pod/worker-86f8b47f95-vdtcg           Liveness probe failed: Get "http://10.244.0.3:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+15h         Warning   Unhealthy           pod/shop-db-1                         Startup probe failed: Get "https://10.244.1.8:8000/startupz": read tcp 10.244.1.1:33990->10.244.1.8:8000: read: connection reset by peer
+15h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: HTTP probe failed with statuscode: 500
+15h         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.8:8000/readyz": write tcp 10.244.1.1:50666->10.244.1.8:8000: write: broken pipe
+42m         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.8:8000/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+42m         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Liveness probe failed: Get "http://10.244.1.9:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+42m         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.8:8000/readyz": context deadline exceeded
+41m         Normal    Killing             pod/api-6858454fd-rjtk6               Container api failed liveness probe, will be restarted
+41m         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Readiness probe failed: Get "http://10.244.1.9:8080/health": dial tcp 10.244.1.9:8080: connect: connection refused
+36m         Normal    SandboxChanged      pod/worker-86f8b47f95-mw8kf           Pod sandbox changed, it will be killed and re-created.
+36m         Normal    SandboxChanged      pod/shop-db-1                         Pod sandbox changed, it will be killed and re-created.
+36m         Normal    SandboxChanged      pod/api-6858454fd-rjtk6               Pod sandbox changed, it will be killed and re-created.
+36m         Normal    SandboxChanged      pod/batch-6b44bb4568-rjwq6            Pod sandbox changed, it will be killed and re-created.
+36m         Normal    SandboxChanged      pod/api-6858454fd-8mhjj               Pod sandbox changed, it will be killed and re-created.
+36m         Normal    Pulled              pod/worker-86f8b47f95-mw8kf           Container image "shop/worker:0.1" already present on machine
+36m         Normal    Pulled              pod/batch-6b44bb4568-rjwq6            Container image "shop/batch:0.1" already present on machine
+36m         Normal    Created             pod/worker-86f8b47f95-mw8kf           Created container: worker
+36m         Normal    Pulled              pod/shop-db-1                         Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1" already present on machine
+36m         Normal    Started             pod/worker-86f8b47f95-mw8kf           Started container worker
+36m         Normal    Pulled              pod/api-6858454fd-rjtk6               Container image "shop/api:0.2" already present on machine
+36m         Normal    Pulled              pod/api-6858454fd-8mhjj               Container image "shop/api:0.2" already present on machine
+36m         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Readiness probe failed: Get "http://10.244.1.4:8080/health": dial tcp 10.244.1.4:8080: connect: connection refused
+36m         Normal    SandboxChanged      pod/worker-86f8b47f95-vdtcg           Pod sandbox changed, it will be killed and re-created.
+36m         Normal    Created             pod/batch-6b44bb4568-rjwq6            Created container: batch
+36m         Normal    Created             pod/shop-db-1                         Created container: bootstrap-controller
+36m         Normal    SandboxChanged      pod/api-6858454fd-jlkbk               Pod sandbox changed, it will be killed and re-created.
+36m         Normal    Pulled              pod/worker-86f8b47f95-vdtcg           Container image "shop/worker:0.1" already present on machine
+36m         Normal    Started             pod/shop-db-1                         Started container bootstrap-controller
+36m         Normal    Created             pod/worker-86f8b47f95-vdtcg           Created container: worker
+36m         Normal    Started             pod/batch-6b44bb4568-rjwq6            Started container batch
+36m         Normal    Created             pod/api-6858454fd-8mhjj               Created container: api
+36m         Normal    Started             pod/api-6858454fd-rjtk6               Started container api
+36m         Normal    Created             pod/api-6858454fd-rjtk6               Created container: api
+36m         Normal    Pulled              pod/api-6858454fd-jlkbk               Container image "shop/api:0.2" already present on machine
+36m         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Readiness probe failed: Get "http://10.244.1.8:8080/health": dial tcp 10.244.1.8:8080: connect: connection refused
+36m         Normal    Started             pod/worker-86f8b47f95-vdtcg           Started container worker
+36m         Warning   Unhealthy           pod/api-6858454fd-8mhjj               Readiness probe failed: Get "http://10.244.1.2:8080/health": dial tcp 10.244.1.2:8080: connect: connection refused
+36m         Normal    Started             pod/api-6858454fd-8mhjj               Started container api
+36m         Normal    Created             pod/api-6858454fd-jlkbk               Created container: api
+36m         Normal    Started             pod/api-6858454fd-jlkbk               Started container api
+36m         Normal    Pulled              pod/shop-db-1                         Container image "ghcr.io/cloudnative-pg/postgresql:18.6-system-trixie" already present on machine
+36m         Normal    Created             pod/shop-db-1                         Created container: postgres
+36m         Normal    Started             pod/shop-db-1                         Started container postgres
+35m         Warning   Unhealthy           pod/shop-db-1                         Startup probe failed: Get "https://10.244.1.10:8000/startupz": dial tcp 10.244.1.10:8000: connect: connection refused
+35m         Warning   Unhealthy           pod/shop-db-1                         Startup probe failed: Get "https://10.244.1.10:8000/startupz": remote error: tls: unrecognized name
+35m         Warning   Unhealthy           pod/shop-db-1                         Startup probe failed: HTTP probe failed with statuscode: 500
+34m         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: HTTP probe failed with statuscode: 500
+16m         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Readiness probe failed: Get "http://10.244.1.4:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+16m         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.10:8000/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy           pod/worker-86f8b47f95-vdtcg           Readiness probe failed: Get "http://10.244.0.2:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy           pod/worker-86f8b47f95-vdtcg           Liveness probe failed: Get "http://10.244.0.2:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+31m         Warning   Unhealthy           pod/worker-86f8b47f95-mw8kf           Liveness probe failed: Get "http://10.244.1.4:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Readiness probe failed: Get "http://10.244.1.8:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy           pod/api-6858454fd-jlkbk               Readiness probe failed: Get "http://10.244.0.7:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy           pod/api-6858454fd-8mhjj               Readiness probe failed: Get "http://10.244.1.2:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+25m         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.10:8000/readyz": context deadline exceeded
+17m         Warning   Unhealthy           pod/api-6858454fd-rjtk6               Liveness probe failed: Get "http://10.244.1.8:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+15m         Warning   Unhealthy           pod/shop-db-1                         Readiness probe failed: Get "https://10.244.1.10:8000/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+18m         Warning   Unhealthy           pod/api-6858454fd-jlkbk               Liveness probe failed: Get "http://10.244.0.7:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy           pod/api-6858454fd-8mhjj               Liveness probe failed: Get "http://10.244.1.2:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m          Normal    Killing             pod/batch-6b44bb4568-rjwq6            Stopping container batch
+9m          Normal    SuccessfulDelete    replicaset/batch-6b44bb4568           Deleted pod: batch-6b44bb4568-rjwq6
+9m          Normal    ScalingReplicaSet   deployment/batch                      Scaled down replica set batch-6b44bb4568 from 1 to 0
+8m27s       Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-ddd8c684b from 0 to 1
+8m27s       Normal    SuccessfulCreate    replicaset/batch-ddd8c684b            Created pod: batch-ddd8c684b-p85vv
+8m27s       Normal    Scheduled           pod/batch-ddd8c684b-p85vv             Successfully assigned shop/batch-ddd8c684b-p85vv to lab4-worker
+8m26s       Normal    Started             pod/batch-ddd8c684b-p85vv             Started container batch
+8m26s       Normal    Created             pod/batch-ddd8c684b-p85vv             Created container: batch
+8m26s       Normal    Pulled              pod/batch-ddd8c684b-p85vv             Container image "shop/batch:0.1" already present on machine
+5m14s       Normal    ScalingReplicaSet   deployment/batch                      Scaled down replica set batch-ddd8c684b from 1 to 0
+5m13s       Normal    Killing             pod/batch-ddd8c684b-p85vv             Stopping container batch
+5m13s       Normal    SuccessfulDelete    replicaset/batch-ddd8c684b            Deleted pod: batch-ddd8c684b-p85vv
+4m40s       Normal    Scheduled           pod/batch-98fb5df89-5zgr4             Successfully assigned shop/batch-98fb5df89-5zgr4 to lab4-worker
+4m40s       Normal    SuccessfulCreate    replicaset/batch-98fb5df89            Created pod: batch-98fb5df89-5zgr4
+4m40s       Normal    ScalingReplicaSet   deployment/batch                      Scaled up replica set batch-98fb5df89 from 0 to 1
+4m39s       Normal    Pulled              pod/batch-98fb5df89-5zgr4             Container image "shop/batch:0.2" already present on machine
+4m39s       Normal    Created             pod/batch-98fb5df89-5zgr4             Created container: batch
+4m38s       Normal    Started             pod/batch-98fb5df89-5zgr4             Started container batch
+3m5s        Warning   OutOfmemory         pod/batch-98fb5df89-5zgr4             Node didn't have enough resource: memory, requested: 50331648, used: 586153984, capacity: 606101504
+3m5s        Warning   OutOfmemory         pod/api-6858454fd-8mhjj               Node didn't have enough resource: memory, requested: 104857600, used: 586153984, capacity: 606101504
+3m3s        Normal    Killing             pod/batch-98fb5df89-5zgr4             Stopping container batch
+3m3s        Normal    Killing             pod/api-6858454fd-8mhjj               Stopping container api
+2m56s       Normal    SuccessfulCreate    replicaset/api-6858454fd              Created pod: api-6858454fd-g5fd2
+2m56s       Normal    Scheduled           pod/api-6858454fd-g5fd2               Successfully assigned shop/api-6858454fd-g5fd2 to lab4-control-plane
+2m53s       Normal    Created             pod/api-6858454fd-g5fd2               Created container: api
+2m53s       Normal    Pulled              pod/api-6858454fd-g5fd2               Container image "shop/api:0.2" already present on machine
+2m53s       Normal    Started             pod/api-6858454fd-g5fd2               Started container api
+2m30s       Normal    SuccessfulCreate    replicaset/batch-98fb5df89            Created pod: batch-98fb5df89-4zqsm
+2m30s       Warning   FailedScheduling    pod/batch-98fb5df89-4zqsm             0/2 nodes are available: 1 Insufficient memory, 1 node(s) didn't match Pod's node affinity/selector.
+2m27s       Normal    Scheduled           pod/batch-98fb5df89-4zqsm             Successfully assigned shop/batch-98fb5df89-4zqsm to lab4-worker
+2m26s       Normal    Pulled              pod/batch-98fb5df89-4zqsm             Container image "shop/batch:0.2" already present on machine
+2m26s       Normal    Created             pod/batch-98fb5df89-4zqsm             Created container: batch
+2m25s       Normal    Started             pod/batch-98fb5df89-4zqsm             Started container batch

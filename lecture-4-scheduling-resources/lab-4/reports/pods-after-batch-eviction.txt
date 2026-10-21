@@ -1,0 +1,10 @@
+NAME                      READY   STATUS      RESTARTS      AGE     IP            NODE                 NOMINATED NODE   READINESS GATES
+api-6858454fd-8mhjj       0/1     Completed   2             17h     <none>        lab4-worker          <none>           <none>
+api-6858454fd-g5fd2       1/1     Running     0             53m     10.244.0.9    lab4-control-plane   <none>           <none>
+api-6858454fd-jlkbk       1/1     Running     2 (88m ago)   17h     10.244.0.7    lab4-control-plane   <none>           <none>
+api-6858454fd-rjtk6       1/1     Running     3 (88m ago)   17h     10.244.1.8    lab4-worker          <none>           <none>
+batch-668f954fd4-87f79    0/1     Pending     0             4m17s   <none>        <none>               <none>           <none>
+batch-668f954fd4-t6c7f    0/1     Error       0             6m19s   10.244.1.17   lab4-worker          <none>           <none>
+shop-db-1                 1/1     Running     2 (88m ago)   22h     10.244.1.10   lab4-worker          <none>           <none>
+worker-86f8b47f95-mw8kf   1/1     Running     2 (88m ago)   23h     10.244.1.4    lab4-worker          <none>           <none>
+worker-86f8b47f95-vdtcg   1/1     Running     2 (88m ago)   23h     10.244.0.2    lab4-control-plane   <none>           <none>

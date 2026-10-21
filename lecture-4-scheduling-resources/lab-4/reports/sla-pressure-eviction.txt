@@ -1,0 +1,2 @@
+LAST SEEN   TYPE      REASON    OBJECT                       MESSAGE
+2m22s       Warning   Evicted   pod/batch-668f954fd4-qb97p   The node was low on resource: memory. Threshold quantity: 3370Mi, available: 3350456Ki. Container batch was using 167608Ki, request is 48Mi, has larger consumption of memory.
