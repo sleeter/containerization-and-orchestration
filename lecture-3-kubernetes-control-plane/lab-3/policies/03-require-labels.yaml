@@ -1,0 +1,36 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-labels
+  annotations:
+    policies.kyverno.io/title: Require labels app and team
+    policies.kyverno.io/description: >-
+      Метки нужны для владельца, селекторов и мониторинга: без app и team под никому не принадлежит.
+spec:
+  background: true
+  rules:
+    - name: check-labels
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - kube-system
+                - kube-public
+                - kube-node-lease
+                - kyverno
+                - monitoring
+                - demo
+                - cnpg-system
+      validate:
+        failureAction: Enforce
+        message: "У пода должны быть метки app и team."
+        pattern:
+          metadata:
+            labels:
+              app: "?*"
+              team: "?*"
