@@ -1,0 +1,23 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: {{ .Values.db.name }}
+  labels:
+    app: postgres
+    team: {{ .Values.team }}
+spec:
+  instances: {{ .Values.db.instances }}
+  # метки для подов, которые создаёт оператор: без них политика require-labels их отклонит
+  inheritedMetadata:
+    labels:
+      app: postgres
+      team: {{ .Values.team }}
+  # PV от minikube-hostpath создаётся только на control-plane (0777); на другой ноде
+  # kubelet создаёт каталог под root:0755 и initdb от uid 26 упирается в Permission denied
+  affinity:
+    nodeSelector:
+      kubernetes.io/hostname: {{ .Values.db.node }}
+  storage:
+    size: {{ .Values.db.storage }}
+  resources:
+    {{- toYaml .Values.db.resources | nindent 4 }}

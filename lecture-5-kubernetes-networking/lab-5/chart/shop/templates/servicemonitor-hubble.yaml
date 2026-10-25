@@ -1,0 +1,17 @@
+{{- if .Values.monitoring.hubble.enabled }}
+# метрики Hubble (отброшенные пакеты, TCP-флаги) живут в kube-system, ServiceMonitor лежит в shop
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: hubble-metrics
+  labels:
+    team: {{ .Values.team }}
+spec:
+  namespaceSelector:
+    matchNames: [kube-system]
+  selector:
+    matchLabels: {k8s-app: hubble}
+  endpoints:
+    - port: hubble-metrics
+      interval: 15s
+{{- end }}

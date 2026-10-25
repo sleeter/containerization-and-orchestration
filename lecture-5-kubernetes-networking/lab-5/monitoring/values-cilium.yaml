@@ -1,0 +1,33 @@
+# kube-proxy оставляем: в Части 2 нужно посмотреть его режим и объяснить, чем он занят
+kubeProxyReplacement: false
+
+# IPAM как у обычного кластера: каждой ноде свой диапазон подов
+ipam:
+  mode: kubernetes
+
+# Hubble: карта трафика и причины отказов (нужна в Части 6)
+hubble:
+  enabled: true
+  relay:
+    enabled: true
+  ui:
+    enabled: true
+  metrics:
+    enabled:
+      - dns
+      - drop
+      - tcp
+      - flow
+      - port-distribution
+
+# метрики агента и оператора для Prometheus из лабы 2
+prometheus:
+  enabled: true
+  serviceMonitor:
+    enabled: false
+operator:
+  prometheus:
+    enabled: true
+    serviceMonitor:
+      enabled: false
+  replicas: 1

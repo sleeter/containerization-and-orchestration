@@ -1,0 +1,66 @@
+team: shop
+
+db:
+  name: shop-db
+  instances: 1
+  node: minikube
+  storage: 1Gi
+  resources:
+    requests: {cpu: 100m, memory: 128Mi}
+    limits: {cpu: 500m, memory: 256Mi}
+
+api:
+  image: shop/api:0.2
+  replicas: 3
+  healthFail: false
+  # точка входа клиента снаружи кластера
+  service:
+    type: NodePort
+    nodePort: 30080
+  resources:
+    requests: {cpu: 50m, memory: 32Mi}
+    limits: {cpu: 200m, memory: 64Mi}
+
+worker:
+  image: shop/worker:0.1
+  replicas: 2
+  resources:
+    requests: {cpu: 50m, memory: 32Mi}
+    limits: {cpu: 200m, memory: 64Mi}
+
+# клиент, который непрерывно ходит в api по DNS-имени сервиса и считает успехи и провалы
+loadgen:
+  enabled: true
+  image: shop/loadgen:0.1
+  rate: 20
+  resources:
+    requests: {cpu: 20m, memory: 24Mi}
+    limits: {cpu: 200m, memory: 64Mi}
+
+# zero-trust: всё запрещено, открыто только нужное (матрица доступа в README)
+networkPolicy:
+  enabled: true
+  ports:
+    api: 8080            # порт api (клиенты и Prometheus)
+    metrics: 8080        # порт метрик worker и loadgen (Prometheus)
+    postgres: 5432
+    operatorStatus: 8000 # статус инстанса, который опрашивает оператор CloudNativePG
+  dns:
+    namespace: kube-system
+    podLabels: {k8s-app: kube-dns}
+  # кто имеет право ходить в api (по меткам подов в этом же namespace)
+  apiClients:
+    - {app: loadgen}
+  monitoring:
+    namespace: monitoring
+    podLabels: {app.kubernetes.io/name: prometheus}
+  operatorNamespace: cnpg-system
+  # NodePort: трафик приходит с адресов нод (host/remote-node) или снаружи (world),
+  # обычным NetworkPolicy это не описать, нужен CiliumNetworkPolicy с entities
+  nodePort:
+    enabled: true
+    entities: [host, remote-node, world]
+
+monitoring:
+  hubble:
+    enabled: true

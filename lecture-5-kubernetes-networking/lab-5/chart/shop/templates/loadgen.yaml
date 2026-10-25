@@ -1,0 +1,62 @@
+{{- if .Values.loadgen.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loadgen
+  labels:
+    app: loadgen
+    team: {{ .Values.team }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loadgen
+  template:
+    metadata:
+      labels:
+        app: loadgen
+        team: {{ .Values.team }}
+    spec:
+      containers:
+        - name: loadgen
+          image: {{ .Values.loadgen.image }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - {name: http, containerPort: 8080}
+          env:
+            # обращаемся по имени сервиса, а не по IP пода: DNS -> ClusterIP -> kube-proxy
+            - name: TARGET
+              value: http://api.{{ .Release.Namespace }}.svc.cluster.local:8080/orders
+            - name: RATE
+              value: {{ .Values.loadgen.rate | quote }}
+          readinessProbe:
+            httpGet: {path: /health, port: http}
+          resources:
+            {{- toYaml .Values.loadgen.resources | nindent 12 }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadgen
+  labels:
+    app: loadgen
+    team: {{ .Values.team }}
+spec:
+  selector:
+    app: loadgen
+  ports:
+    - {name: http, port: 8080, targetPort: http}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: loadgen
+  labels:
+    team: {{ .Values.team }}
+spec:
+  selector:
+    matchLabels: {app: loadgen}
+  endpoints:
+    - port: http
+      interval: 5s
+{{- end }}

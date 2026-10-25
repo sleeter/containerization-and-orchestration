@@ -1,0 +1,154 @@
+{{- if .Values.networkPolicy.enabled }}
+{{- $np := .Values.networkPolicy }}
+# 1. default-deny: к любому поду namespace по умолчанию никто не может подключиться
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress
+spec:
+  podSelector: {}
+  policyTypes: [Ingress]
+---
+# 2. api: принимает клиентов и Prometheus
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-api-ingress
+spec:
+  podSelector:
+    matchLabels: {app: api}
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        {{- range $np.apiClients }}
+        - podSelector:
+            matchLabels:
+              {{- toYaml . | nindent 14 }}
+        {{- end }}
+      ports:
+        - {protocol: TCP, port: {{ $np.ports.api }}}
+    - from:
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: {{ $np.monitoring.namespace }}}
+          podSelector:
+            matchLabels:
+              {{- toYaml $np.monitoring.podLabels | nindent 14 }}
+      ports:
+        - {protocol: TCP, port: {{ $np.ports.api }}}
+---
+# 3. worker и loadgen: только метрики для Prometheus
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-metrics-ingress
+spec:
+  podSelector:
+    matchExpressions:
+      - {key: app, operator: In, values: [worker, loadgen]}
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: {{ $np.monitoring.namespace }}}
+          podSelector:
+            matchLabels:
+              {{- toYaml $np.monitoring.podLabels | nindent 14 }}
+      ports:
+        - {protocol: TCP, port: {{ $np.ports.metrics }}}
+---
+# 4. postgres: api и worker по порту БД, оператор по портам БД и статуса
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-postgres-ingress
+spec:
+  podSelector:
+    matchLabels:
+      cnpg.io/cluster: {{ .Values.db.name }}
+      cnpg.io/podRole: instance
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - podSelector:
+            matchExpressions:
+              - {key: app, operator: In, values: [api, worker]}
+      ports:
+        - {protocol: TCP, port: {{ $np.ports.postgres }}}
+    - from:
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: {{ $np.operatorNamespace }}}
+      ports:
+        - {protocol: TCP, port: {{ $np.ports.postgres }}}
+        - {protocol: TCP, port: {{ $np.ports.operatorStatus }}}
+---
+# 5. egress: api, worker и loadgen ходят только туда, куда им нужно, и в DNS
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-dns-egress
+spec:
+  podSelector:
+    matchExpressions:
+      - {key: app, operator: In, values: [api, worker, loadgen]}
+  policyTypes: [Egress]
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: {{ $np.dns.namespace }}}
+          podSelector:
+            matchLabels:
+              {{- toYaml $np.dns.podLabels | nindent 14 }}
+      ports:
+        - {protocol: UDP, port: 53}
+        - {protocol: TCP, port: 53}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-db-egress
+spec:
+  podSelector:
+    matchExpressions:
+      - {key: app, operator: In, values: [api, worker]}
+  policyTypes: [Egress]
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              cnpg.io/cluster: {{ .Values.db.name }}
+              cnpg.io/podRole: instance
+      ports:
+        - {protocol: TCP, port: {{ $np.ports.postgres }}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-loadgen-egress
+spec:
+  podSelector:
+    matchLabels: {app: loadgen}
+  policyTypes: [Egress]
+  egress:
+    - to:
+        - podSelector:
+            matchLabels: {app: api}
+      ports:
+        - {protocol: TCP, port: {{ $np.ports.api }}}
+{{- if $np.nodePort.enabled }}
+---
+# 6. NodePort: клиент снаружи заходит через адрес ноды (kube-proxy подменяет источник)
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-api-nodeport
+spec:
+  endpointSelector:
+    matchLabels: {app: api}
+  ingress:
+    - fromEntities:
+        {{- toYaml $np.nodePort.entities | nindent 8 }}
+      toPorts:
+        - ports:
+            - {port: {{ $np.ports.api | quote }}, protocol: TCP}
+{{- end }}
+{{- end }}

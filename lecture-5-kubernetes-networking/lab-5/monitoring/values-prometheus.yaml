@@ -1,0 +1,26 @@
+prometheus:
+  prometheusSpec:
+    # брать любые ServiceMonitor/PrometheusRule из любых namespace, а не только с лейблом релиза
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+    retention: 6h
+    resources:
+      requests: {cpu: 100m, memory: 400Mi}
+      limits: {memory: 800Mi}
+
+# Alertmanager не нужен: алерты в лабе проверяем по состоянию firing в Prometheus
+alertmanager:
+  enabled: false
+
+grafana:
+  adminPassword: admin
+  # Grafana 13 с лимитом 400Mi убивается по OOM, 1Gi хватает с запасом
+  resources:
+    requests: {cpu: 100m, memory: 300Mi}
+    limits: {memory: 1Gi}
+
+# в этой лабе не нужны
+kubeEtcd: {enabled: false}
+kubeScheduler: {enabled: false}
+kubeControllerManager: {enabled: false}
