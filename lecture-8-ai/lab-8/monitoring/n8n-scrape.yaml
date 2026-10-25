@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ScrapeConfig
+metadata:
+  name: lab8-n8n
+  namespace: monitoring
+  labels:
+    release: monitoring
+spec:
+  scrapeInterval: 15s
+  metricsPath: /metrics
+  staticConfigs:
+    - targets:
+        - "172.18.0.4:5678"
+      labels:
+        job: lab8-n8n

@@ -1,0 +1,201 @@
+{
+  "name": "Shop diagnostics",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9d6b0b14-fbcb-4acf-9262-d13a9e35f9de",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0bee42ec-c8bf-4e6b-9482-95acc36ebb08",
+              "name": "namespace",
+              "value": "shop",
+              "type": "string"
+            },
+            {
+              "id": "4701f18d-8a31-487e-bb65-5e8c94e8a8df",
+              "name": "service",
+              "value": "api",
+              "type": "string"
+            },
+            {
+              "id": "bd7a3602-7994-4143-b596-f60f5837a156",
+              "name": "request",
+              "value": "Проверь состояние API магазина: доступность реплик, перезапуски, доступность метрик и ошибки запросов за последние 15 минут. Отдели подтверждённые факты от предположений. Предложи дальнейшие проверки без изменения кластера.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "e73917d7-bf51-4109-8cfa-aef44f8cdcf4",
+      "name": "Diagnostic request"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.request }}\n\nNamespace: {{ $json.namespace }}\nService: {{ $json.service }}",
+        "options": {
+          "systemMessage": "Ты диагностируешь shop только чтением данных.\nПеред отчётом вызови все три инструмента:\nprometheus_targets, kubernetes_pods, kubernetes_deployments.\n\nДля api и worker считай результаты отдельно.\nup означает успешность scrape, а не готовность пода.\nГотовность подов определяй по condition Ready.\nЖелаемое и доступное число реплик бери из Deployment.\nЗавершённые поды старых ReplicaSet не считай текущими репликами.\nbatch с желаемыми replicas=0 не считай неисправностью.\nНе делай выводов о restartCount, если поле не получено.\nПри расхождении источников учитывай, что снимки сделаны в разное время.\n\nКраткий отчёт: подтверждённые факты с источниками,\nограничения, гипотезы и дальнейшие проверки.\nНе выдумывай метрики ошибок и задержек, которых нет в ответах.\nОтсутствующее поле означает неизвестность, а не ноль.\nЕсли restartCount не получен, во всём отчёте, включая итог,\nпиши: «Число перезапусков неизвестно».\nreadyReplicas не доказывает принадлежность подов текущему ReplicaSet.\nНе утверждай эту принадлежность без соответствующих данных.\nОтвет ограничь 250 словами: факты, ограничения, гипотезы, проверки.\n\nReady и availableReplicas не доказывают успешность бизнес-запросов\nи не позволяют исключать сетевые проблемы.\nprometheus_targets возвращает только текущий up: он не предоставляет\nисторию target health или lastError.\nПиши отчёт по-русски."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        448,
+        0
+      ],
+      "id": "a33fa042-f5a3-4c8b-9b36-ecddb76cf25b",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-20b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        320,
+        208
+      ],
+      "id": "f76014c1-afdf-4785-aca1-9b0ad88e8257",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "TwfunC9cb71TQUEw",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://localhost:5678/mcp/shop-prometheus",
+        "include": "selected",
+        "includeTools": [
+          "prometheus_targets"
+        ],
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.4,
+      "position": [
+        432,
+        208
+      ],
+      "id": "2f4b95b8-7739-4527-b7f0-ce9c37fa005e",
+      "name": "MCP Client"
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://localhost:5678/mcp/shop-kubernetes",
+        "include": "selected",
+        "includeTools": [
+          "kubernetes_pods",
+          "kubernetes_deployments"
+        ],
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.4,
+      "position": [
+        640,
+        192
+      ],
+      "id": "8dfc961a-d498-492a-9aa8-10b8415f951a",
+      "name": "Kubernetes MCP"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Diagnostic request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Diagnostic request": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Kubernetes MCP": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "98c4b7db-6a2a-4be1-8565-647ae3aac244",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "63a7ca7fccd60b675761becb885e0416dd8f4663966a3a19d740033370b27a18"
+  },
+  "nodeGroups": [],
+  "id": "PWVYqQba18sSbEyQ",
+  "tags": []
+}

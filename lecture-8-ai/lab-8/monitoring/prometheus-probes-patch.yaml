@@ -1,0 +1,11 @@
+spec:
+  containers:
+    - name: prometheus
+      livenessProbe:
+        timeoutSeconds: 10
+        periodSeconds: 15
+        failureThreshold: 6
+      readinessProbe:
+        timeoutSeconds: 10
+        periodSeconds: 15
+        failureThreshold: 3

@@ -1,0 +1,138 @@
+{
+  "name": "Kubernetes MCP",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "eb3534b7-e7ea-4163-a36c-189ff8b372d8",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "path": "shop-kubernetes"
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "typeVersion": 2.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "8cf72f47-a971-4526-9c57-4add1f8d990e",
+      "name": "MCP Server Trigger",
+      "webhookId": "b9f88160-bacb-4094-9b79-9f1e2b08e704"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Читает поды namespace shop: phase, conditions, состояния контейнеров\nи restartCount. Не изменяет кластер. Старые завершённые поды\nнеобходимо отличать от текущих подов Deployment.",
+        "url": "https://host.docker.internal:45123/api/v1/namespaces/shop/pods",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "labelSelector",
+              "value": "app in (api,worker)"
+            },
+            {
+              "name": "fieldSelector",
+              "value": "status.phase!=Succeeded,status.phase!=Failed"
+            }
+          ]
+        },
+        "options": {
+          "allowUnauthorizedCerts": true
+        },
+        "optimizeResponse": true,
+        "dataField": "items",
+        "fieldsToInclude": "selected",
+        "fields": "metadata.name,status.phase,status.conditions"
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.5,
+      "position": [
+        208,
+        128
+      ],
+      "id": "39367118-2437-4d77-b31c-9e950d071299",
+      "name": "kubernetes_pods",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "L4d5VU7oBXbHEQqU",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Возвращает желаемое и фактическое состояние Deployment в shop.\nСравни spec.replicas с readyReplicas и availableReplicas.",
+        "url": "https://host.docker.internal:45123/apis/apps/v1/namespaces/shop/deployments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "allowUnauthorizedCerts": true
+        },
+        "optimizeResponse": true,
+        "dataField": "items",
+        "fieldsToInclude": "selected",
+        "fields": "metadata.name,spec.replicas,status"
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.5,
+      "position": [
+        480,
+        144
+      ],
+      "id": "9b3c4565-8803-4628-97c1-ea9eab7823a2",
+      "name": "kubernetes_deployments",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "L4d5VU7oBXbHEQqU",
+          "name": "Header Auth account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "kubernetes_pods": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "kubernetes_deployments": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "5f5d32d0-2693-45f4-8f82-4eac4141ecbf",
+  "meta": {
+    "instanceId": "63a7ca7fccd60b675761becb885e0416dd8f4663966a3a19d740033370b27a18"
+  },
+  "nodeGroups": [],
+  "id": "tywWji2EOwWi6uGL",
+  "tags": []
+}
